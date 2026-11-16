@@ -46,7 +46,7 @@
 }
 .ldp_mhg .block_logo {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   justify-items: center;
   align-items: center;
   gap: 20px 30px;
@@ -54,20 +54,18 @@
 }
 @media (max-width: 767px) {
   .ldp_mhg .block_logo {
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .ldp_mhg .block_logo {
     grid-template-columns: repeat(6, 1fr);
-    gap: 20px;
   }
   .ldp_mhg .block_logo > * {
     grid-column: span 2;
   }
   .ldp_mhg .block_logo > :first-child {
     grid-column: 1 / -1;
-  }
-  .ldp_mhg .block_logo > :nth-child(5) {
-    grid-column: 2 / span 2;
-  }
-  .ldp_mhg .block_logo > :nth-child(6) {
-    grid-column: 4 / span 2;
   }
 }
 .ldp_mhg .block_logo > *:first-child {

@@ -19,12 +19,13 @@
 
     .h_1 {
         font-family: var(--font-ldp-extrabold);
-        .fs(26px, 62px);
+        .fs(26px, 48px);
         text-transform: uppercase;
         background-image: var(--color-plasma-gradient);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-align: center;
     }
 
     .top_1 {
@@ -137,6 +138,7 @@
                 grid-template-columns: repeat(3, minmax(0, 1fr));
                 .gap(10px, 15px);
                 width: 100%;
+                align-items: normal;
 
                 >div {
                     min-width: 0;
@@ -233,6 +235,283 @@
             }
         }
     }
+
+    .top_4 {
+        --url: url(../images/ldp_plasma_1.jpg);
+
+        .bl_1 {
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+            gap: 15px;
+            width: 100%;
+            align-items: normal;
+
+            .img_1 {
+                height: 0;
+                min-height: 100%;
+                grid-row: span 2;
+            }
+        }
+
+        .d_1 {
+            .t_1 {
+                .fs(20px, 32px);
+                background: url(../images/ldp_plasma_28.png) no-repeat right bottom / contain;
+                .p(0px 0px 20px 60px);
+                .ta(right);
+            }
+        }
+    }
+
+    .top_5 {
+        color: white;
+        .fs(14px, 24px);
+        background-color: var(--color-plasma-light-blue);
+        font-family: var(--font-ldp-light);
+
+        .d_1 {
+            border: 1px solid white;
+
+            tr {
+                display: flex;
+                .p(0px, none);
+
+                td {
+                    .p(5px 20px, 10px 30px);
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid white;
+
+
+                    &:nth-of-type(1) {
+                        .w(45%, 40%);
+                    }
+
+                    &:nth-of-type(2) {
+                        .w(55%, 60%);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .top_6 {
+        --url: url(../images/ldp_plasma_30.jpg);
+
+        .t_1 {
+            text-align: center;
+        }
+
+        .d_1 {
+            .p(30px 15px, 60px 30px);
+            background-color: var(--bg-plasma);
+            .rad(0px 30px, 0px 60px);
+
+            .owl-stage {
+                display: flex;
+
+                &>div {
+                    display: flex;
+                    align-items: center;
+
+                    &>div {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .top_7 {
+        --url: url(../images/ldp_plasma_32.jpg);
+        text-align: center;
+        .p(30px 0px, 60px 0px 90px);
+
+        .bl_1 {
+            grid-template-columns: 0.7fr 0.8fr 0.9fr 1fr 0.8fr 0.7fr;
+            align-items: end;
+            .p(0px 30px);
+            width: 100%;
+
+            .d_1 {
+
+                .p_1 {
+                    position: relative;
+                    top: -60px;
+                    z-index: 2;
+                }
+
+                .t_1 {
+                    font-family: var(--font-ldp-extrabold);
+                    color: var(--color-plasma-medium-blue);
+                    .fs(12px, 16px);
+                    text-transform: uppercase;
+                    margin: 0px;
+                }
+
+                .h_1 {
+                    font-family: var(--font-ldp-medium);
+                }
+            }
+        }
+
+        .bl_2 {
+            background-image: linear-gradient(to top, white, white, white, white, transparent 100%);
+            .p(60px 0px 30px, 120px 0px 30px);
+            .po(unset, absolute);
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: 1;
+
+            .t_1 {
+                color: white;
+                .fs(22px, 38px);
+                margin: 0px auto;
+                padding: 10px 30px;
+                background-color: var(--color-plasma-dark-blue);
+                .rad(20px);
+                font-family: var(--font-ldp-bold);
+                width: fit-content;
+            }
+        }
+    }
+
+    .top_8 {
+        --url: url(../images/ldp_plasma_39.jpg);
+        text-align: center;
+        aspect-ratio: 1920/2714;
+
+        .bl_1 {
+            .t_1 {
+                font-family: var(--font-ldp-bold);
+                .fs(28px, 68px);
+                margin: 0px;
+            }
+
+            .t_2 {
+                .fs(32px, 72px);
+            }
+        }
+
+
+        .bl_2 {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0px;
+            position: relative;
+            --gradient: linear-gradient(to top, white 10%, transparent 35%);
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
+
+            .d_1 {
+                --img: url(../images/ldp_plasma_40.png);
+                position: relative;
+                isolation: isolate;
+                overflow: hidden;
+                //.rad(20px, 60px);
+                .p(15px, 30px 60px 50px);
+                aspect-ratio: 1/1;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                // border: 2px solid white;
+                //box-shadow: 0px 0px 20px white;
+
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    pointer-events: none;
+                }
+
+                &::before {
+                    z-index: -2;
+                    background: no-repeat center / cover;
+                    background-image: var(--img);
+                    transition: transform 0.5s ease;
+                }
+
+                &::after {
+                    z-index: -1;
+                    //background-image: var(--gradient);
+                }
+
+                &:nth-of-type(2) {
+                    --img: url(../images/ldp_plasma_41.png);
+                }
+
+                &:nth-of-type(3) {
+                    --img: url(../images/ldp_plasma_42.png);
+                }
+
+                &:nth-of-type(4) {
+                    --img: url(../images/ldp_plasma_43.png);
+                }
+
+                .t_1 {
+                    font-family: var(--font-ldp-extrabold);
+                    .fs(18px, 32px);
+                    margin: 0px;
+                }
+
+                .t_2 {
+                    font-family: var(--font-ldp-light);
+                    .fs(14px, 18px);
+                    color: var(--color-plasma-medium-blue);
+                }
+            }
+
+        }
+    }
+
+    .top_9 {
+        background-color: var(--color-plasma-light-blue);
+
+        .t_1 {
+            .fs(22px, 36px);
+        }
+    }
+
+    .top_10 {
+        --url: url(../images/ldp_plasma_45.jpg);
+        text-align: center;
+
+        .t_1 {
+            .fs(28px, 68px);
+            font-family: var(--font-ldp-medium);
+            .lh(unset, 1);
+            .gap(15px, 30px);
+
+            &::after,
+            &::before {
+                content: "";
+                border: 1px solid var(--color-plasma-dark-blue);
+                flex: 1;
+            }
+        }
+
+        .h_1 {
+            .fs(28px, 68px);
+            margin: 0px;
+            .lh(unset, 1.6);
+        }
+
+        .btn_1 {
+            .p(20px 60px);
+            background-color: white;
+            .rad(30px, 50px);
+            width: fit-content;
+            margin: 10px auto 0px;
+            border: 1px solid var(--color-plasma-dark-blue);
+        }
+    }
+
 }
 
 .bl_product {

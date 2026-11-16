@@ -54,15 +54,14 @@
 
     .block_logo {
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        grid-template-columns: repeat(6, auto);
         justify-items: center;
         align-items: center;
-        gap: 20px 30px;
+        .gap(15px, 20px 30px);
         width: fit-content;
 
         @media (max-width: 767px) {
             grid-template-columns: repeat(6, 1fr);
-            gap: 20px;
 
             >* {
                 grid-column: span 2;
@@ -72,13 +71,6 @@
                 grid-column: 1 / -1;
             }
 
-            > :nth-child(5) {
-                grid-column: 2 / span 2;
-            }
-
-            > :nth-child(6) {
-                grid-column: 4 / span 2;
-            }
         }
 
         >* {
@@ -1052,12 +1044,8 @@
 
         .d_1 {
             background: no-repeat center / 100% 100%;
-            padding: 60px 30px;
+            .p(30px 15px, 60px 30px);
             background-image: url(../images/index_107.png);
-
-            @media (max-width: 767px) {
-                padding: 30px 15px;
-            }
 
             .owl-stage {
                 display: flex;

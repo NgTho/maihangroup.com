@@ -40,10 +40,11 @@ body {
   --color-trio-light-blue: #ecf8ff;
   --color-trio-gradient: linear-gradient(to bottom, #2869cc 40%, var(--color-trio-medium-blue) 60%);
   --drop-shadow-trio: drop-shadow(0px 3px 3px rgba(23, 141, 224, 0.47)) drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.4));
-  --box-shadow-trio: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  --box-shadow-trio: 5px 5px 15px rgba(0, 0, 0, 0.8);
   --text-shadow-trio: 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 20px #fff, 0px 0px 20px #fff;
   --color-plasma-dark-blue: #01389b;
   --color-plasma-medium-blue: #00549c;
+  --color-plasma-light-blue: #84c6ff;
   --color-plasma-gradient: linear-gradient(to bottom, var(--color-plasma-dark-blue) 40%, #0266ee 70%);
   --bg-plasma: rgba(255, 255, 255, 0.5);
 }

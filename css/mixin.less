@@ -9,6 +9,14 @@
     font-size: clamp(@min, @vw, @max);
 }
 
+.bg(@url: false, @repeat: no-repeat, @pos: center, @size: cover) when (@url =false) {
+    background:~"@{repeat} @{pos} / @{size}";
+}
+
+.bg(@url: false, @repeat: no-repeat, @pos: center, @size: cover) when not (@url =false) {
+    background:~"url(@{url}) @{repeat} @{pos} / @{size}";
+}
+
 .res-tablet(@prop, @mobile, @tablet) when (@tablet =true) {
     @media (max-width: @bp-tablet) {
         @{prop}: @mobile;
@@ -31,7 +39,12 @@
     @{prop}: @mobile;
 }
 
-.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when not (@desktop =false) {
+.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when (@desktop =none) {
+    .res-tablet(@prop, @mobile, @tablet);
+    .res-mobile(@prop, @mobile, @tablet, @breakpoint);
+}
+
+.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when not (@desktop =false) and not (@desktop =none) {
     @{prop}: @desktop;
     .res-tablet(@prop, @mobile, @tablet);
     .res-mobile(@prop, @mobile, @tablet, @breakpoint);

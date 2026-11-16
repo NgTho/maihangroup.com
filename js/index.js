@@ -1048,6 +1048,25 @@ $(document).ready(function () {
     }
   });
 
+  ////////////////////      slider_partner_plasma          ////////////////////
+  $('.slider_partner_plasma .owl-carousel').owlCarousel({
+    center: false,
+    loop: true,
+    stagePadding: 0,
+    autoplay: true,
+    navSpeed: 1000,
+    autoplaySpeed: 1000,
+    nav: false,
+    dots: false,
+    autoplayTimeout: 2000,
+    lazyLoad: true,
+    lazyLoadEager: 1,
+    responsive: {
+      0: { items: 4, margin: 15 },
+      767: { items: 7, margin: 30 }
+    }
+  });
+
 
   ///////////    Count number   //////////
   $('.t_count').each(function () {
