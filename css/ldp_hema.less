@@ -1,0 +1,515 @@
+@import (reference) "mixin.less";
+
+.ldp_hema {
+    color: var(--color-dark-blue);
+    .fs(14px, 14px);
+    font-family: var(--font-hema-normal);
+
+    b {
+        font-family: var(--font-hema-bold);
+    }
+
+    .d_bg {
+        aspect-ratio: unset;
+    }
+
+    .d_border_gradient {
+        position: relative;
+        --border-width: 3px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            padding: var(--border-width);
+            border-radius: inherit;
+            background: linear-gradient(to bottom, var(--color-light-blue) 30%, var(--color-medium-blue) 70%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+    }
+
+    .h_1 {
+        .fs(18px, 22px);
+        background-image: var(--color-gradient-hema-bottom);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        font-family: var(--font-hema-bold);
+        padding: 3px 0px;
+    }
+
+    .h_1_2 {
+        background-image: var(--color-gradient-hema-right);
+        .fs(32px, 54px);
+    }
+
+    .img_sp {
+        -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 90%, rgba(255, 255, 255, 1));
+        margin: 0px auto;
+
+        @media (max-width: 1200px) {
+            max-height: 300px;
+            margin: 20px auto 0px;
+        }
+    }
+
+    .top_1 {
+        --url: url(../images/ldp_hema_1.jpg);
+
+        .t_1 {
+            font-family: var(--font-hema-bold);
+            .fs(20px, 28px);
+            text-transform: uppercase;
+            margin: 0px;
+        }
+
+        .t_2 {
+            margin: 0px;
+        }
+
+        .t_3 {
+            color: white;
+            display: inline-block;
+            position: relative;
+            clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
+            background-image: var(--color-gradient-hema-right);
+            padding: 6px 20px;
+            font-family: var(--font-hema-bolditalic);
+            text-transform: uppercase;
+        }
+
+        .img_1 {
+            margin: 20px auto 0px;
+        }
+
+        .img_3 {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+
+            @media (max-width: 767px) {
+                position: unset;
+                margin: 0px auto 10px;
+            }
+        }
+    }
+
+    .top_2 {
+        --url: url(../images/ldp_hema_4.jpg);
+
+        .s_1 {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 1fr;
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                grid-auto-rows: unset;
+                gap: 20px;
+            }
+        }
+
+        .bl_1 {
+            text-align: center;
+            padding: 20px;
+            border-radius: 30px;
+            background-image: linear-gradient(to right, transparent, rgba(107, 157, 193, 0.3));
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width: 767px) {
+                padding: 20px 15px;
+                border-radius: 25px;
+            }
+
+            .t_1 {
+                margin: 0px;
+
+                span {
+                    .fs(16px, 16px);
+                }
+            }
+
+            .t_2 {
+                text-align: justify;
+            }
+        }
+
+        .d_1 {
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(0, 1fr);
+            text-align: center;
+
+            .p_1 {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-items: center;
+
+                .t_3 {
+                    font-family: var(--font-hema-bold);
+                    margin: 0px;
+                    .fs(12px, 12px);
+                }
+
+                .t_4 {
+                    font-family: var(--font-hema-italic);
+                    margin: 0px;
+                    .fs(12px, 12px);
+                }
+            }
+        }
+
+        .d_2 {
+            --border-width: 2px;
+            display: flex;
+            gap: 10px;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-align: left;
+            margin-top: 10px;
+            width: 100%;
+            align-items: center;
+
+            @media (max-width: 767px) {
+                border-radius: 15px;
+            }
+
+            img {
+                width: 30px;
+                height: 33px;
+            }
+
+            .t_3 {
+                margin: 0px;
+            }
+        }
+
+        .bl_2 {
+            text-align: center;
+
+            @media (max-width: 767px) {
+                padding-left: 5px;
+            }
+
+            .d_3 {
+                text-align: left;
+                display: flex;
+                position: relative;
+                gap: 20px;
+
+                &::before {
+                    content: "";
+                    height: stretch;
+                    width: 1px;
+                    background-color: var(--color-dark-blue);
+                }
+
+                .p_1 {
+                    position: relative;
+                    margin-bottom: 10px;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 10px;
+                        width: 11px;
+                        background-color: var(--color-dark-blue);
+                        border-radius: 50%;
+                        top: 5px;
+                        left: -26px;
+                    }
+
+                    .t_2 {
+                        font-family: var(--font-hema-bold);
+                        margin: 0px;
+                    }
+
+                    .t_3 {
+                        .fs(12px, 12px);
+                        margin: 0px;
+                    }
+                }
+
+
+            }
+        }
+
+    }
+
+    .top_3 {
+        --url: url(../images/ldp_hema_10.jpg);
+
+        .bl_1 {
+            text-align: center;
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-bottom: 30px;
+            }
+
+            .t_1 {
+                margin: 0px;
+            }
+
+            .img_1 {
+                width: 100%;
+                margin: 0px auto 10px;
+
+                @media (max-width: 767px) {
+                    margin: 0px auto;
+                }
+            }
+        }
+
+        .bl_2 {
+            margin-bottom: 0px;
+        }
+    }
+
+    .top_4 {
+        --url: url(../images/ldp_hema_14.jpg);
+
+        .s_2 {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+        }
+
+        .d_1 {
+            margin-bottom: 10px;
+            gap: 30px;
+
+            @media (max-width: 767px) {
+                gap: 10px;
+            }
+
+            .p_1 {
+                .t_4 {
+                    font-family: unset;
+                }
+            }
+        }
+
+        .d_2 {
+            padding: 8px;
+            border-radius: 30px;
+
+            @media (max-width: 767px) {
+                border-radius: 15px;
+            }
+
+            img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    }
+
+    .top_5 {
+        --url: url(../images/ldp_hema_20.jpg);
+
+        .d_1 {}
+    }
+
+    .top_6 {
+        --url: url(../images/ldp_hema_24.jpg);
+        text-align: center;
+
+        .t_1 {
+            .fs(14px, 26px);
+            color: white;
+            background-image: var(--color-gradient-hema-bottom);
+            border-radius: 30px;
+            padding: 5px 30px;
+            font-family: var(--font-hema-bold);
+            display: inline-block;
+
+            @media (max-width: 767px) {
+                padding: 5px 20px;
+                margin: 0px;
+            }
+        }
+
+        .t_2 {
+            .fs(26px, 52px);
+
+            @media (max-width: 767px) {
+                margin: 0px;
+            }
+        }
+
+        .t_3 {
+            font-family: var(--font-hema-mediumitalic);
+            .fs(18px, 26px);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .bl_1 {
+            gap: 30px;
+            margin-bottom: 60px;
+            grid-auto-columns: 1fr;
+            grid-auto-flow: column;
+            align-items: stretch;
+
+            @media (max-width: 767px) {
+                grid-auto-rows: 1fr;
+                grid-auto-flow: row;
+                gap: 10px;
+                margin-bottom: 30px;
+
+            }
+
+            .d_1 {
+                display: grid;
+                align-content: center;
+                border-radius: 20px;
+                padding: 10px 20px;
+                --border-width: 2px;
+                .fs(16px, 22px);
+                font-family: var(--font-hema-semibold);
+            }
+        }
+
+        .s_1 {
+            gap: 30px;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+            margin-bottom: 60px;
+
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr;
+                margin-bottom: 30px;
+                gap: 10px;
+            }
+        }
+
+        .bl_2 {
+            gap: 30px;
+            grid-auto-columns: minmax(0, 1fr);
+            grid-auto-flow: column;
+
+            @media (max-width: 767px) {
+                gap: 15px;
+                width: 100%;
+            }
+
+
+            .d_1 {
+                background: no-repeat center / contain;
+                background-image: url(../images/ldp_hema_26.png);
+                position: relative;
+                aspect-ratio: 1/1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                p {
+                    margin: 0px;
+                }
+
+                .t_4 {
+                    .fs(18px, 36px);
+                    padding: 0px;
+                }
+
+                .t_5 {
+                    .fs(12px, 20px);
+                    width: 75%;
+                }
+            }
+        }
+
+        .t_6 {
+            color: white;
+            font-family: var(--font-hema-bold);
+            .fs(16px, 26px);
+            padding: 5px 20px;
+            background-image: linear-gradient(to right, transparent, var(--color-dark-blue) 20%, var(--color-dark-blue) 80%, transparent);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+
+            @media (max-width: 767px) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .bl_3 {
+            margin: 0px auto 60px;
+
+            @media (max-width: 767px) {
+                margin: 0px auto 30px;
+            }
+
+            .d_1 {
+                background-image: linear-gradient(to bottom, var(--color-medium-blue) 30%, var(--color-light-blue));
+                color: white;
+                padding: 15px;
+                border-radius: 50%;
+
+                @media (max-width: 767px) {
+                    padding: 0px;
+                }
+
+                .t_7 {
+                    .fs(18px, 42px);
+                    font-family: var(--font-hema-bold);
+
+                }
+
+                .t_8 {
+                    text-transform: uppercase;
+
+                    @media (max-width: 767px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .top_7 {
+        --url: url(../images/ldp_hema_29.jpg);
+        text-align: center;
+
+        .t_1 {
+            text-transform: uppercase;
+            .fs(18px, 28px);
+            font-family: var(--font-hema-bold);
+            margin: 0px;
+        }
+    }
+
+    .top_8 {
+        --url: url(../images/ldp_hema_31.jpg);
+
+        .img_1 {
+            margin: 30px auto;
+            width: 200px;
+
+            @media (max-width: 767px) {
+                margin: 0px auto 15px;
+                width: unset;
+            }
+        }
+
+    }
+}

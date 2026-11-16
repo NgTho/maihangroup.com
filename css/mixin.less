@@ -1,0 +1,150 @@
+@scale-xl: 1.37;
+@bp-xl: 1920px;
+@bp-mobile: 767px;
+@bp-tablet: 1200px;
+
+.fs(@min, @base) {
+    @max: (floor((@base * @scale-xl / 2)) * 2);
+    @vw: unit((unit(@max) / unit(@bp-xl) * 100), vw);
+    font-size: clamp(@min, @vw, @max);
+}
+
+.res-tablet(@prop, @mobile, @tablet) when (@tablet =true) {
+    @media (max-width: @bp-tablet) {
+        @{prop}: @mobile;
+    }
+}
+
+.res-tablet(@prop, @mobile, @tablet) when not (@tablet =true) and not (@tablet =false) {
+    @media (max-width: @bp-tablet) {
+        @{prop}: @tablet;
+    }
+}
+
+.res-mobile(@prop, @mobile, @tablet, @breakpoint) when not (@tablet =true) {
+    @media (max-width: @breakpoint) {
+        @{prop}: @mobile;
+    }
+}
+
+.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when (@desktop =false) {
+    @{prop}: @mobile;
+}
+
+.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when not (@desktop =false) {
+    @{prop}: @desktop;
+    .res-tablet(@prop, @mobile, @tablet);
+    .res-mobile(@prop, @mobile, @tablet, @breakpoint);
+}
+
+.m(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.mt(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin-top, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.mb(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin-bottom, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.ml(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin-left, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.mr(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin-right, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.mx(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin-inline, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.my(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(margin-block, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.p(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.pt(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding-top, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.pb(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding-bottom, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.pl(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding-left, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.pr(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding-right, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.px(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding-inline, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.py(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(padding-block, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.w(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(width, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.h(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(height, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.mw(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(max-width, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.minh(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(min-height, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.lh(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(line-height, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.gap(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(gap, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.rad(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(border-radius, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.dp(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(display, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.ta(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(text-align, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.po(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(position, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.top(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(top, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.right(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(right, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.bottom(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(bottom, @mobile, @desktop, @tablet, @breakpoint);
+}
+
+.left(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
+    .res(left, @mobile, @desktop, @tablet, @breakpoint);
+}

@@ -1,0 +1,450 @@
+@import (reference) "mixin.less";
+
+body {
+    --color-dark-green: #095c2c;
+    --color-spring-green: #12b257;
+    --color-racing-green: #015935;
+    --color-medium-green: #1d9b4e;
+    --color-medium-teal-green: #01865f;
+    --color-lightest-green: #daffef;
+    --color-gradient: linear-gradient(to bottom, var(--color-dark-green) 50%, var(--color-spring-green));
+    --font-ldp-normal: 'BeVietnamPro-Regular' !important;
+    --font-ldp-medium: 'BeVietnamPro-Medium' !important;
+    --font-ldp-light: 'BeVietnamPro-Light' !important;
+    --font-ldp-bold: 'BeVietnamPro-Bold' !important;
+    --font-ldp-semibold: 'BeVietnamPro-SemiBold' !important;
+    --font-ldp-extrabold: 'BeVietnamPro-ExtraBold' !important;
+    --font-ldp-black: 'BeVietnamPro-Black' !important;
+
+
+
+    --font-hema-normal: 'FZ-Poppins-Regular' !important;
+    --font-hema-bold: 'FZ-Poppins-Bold' !important;
+    --font-hema-bolditalic: 'FZ-Poppins-BoldItalic' !important;
+    --font-hema-italic: 'FZ-Poppins-Italic' !important;
+    --font-hema-semibold: 'FZ-Poppins-SemiBold' !important;
+    --font-hema-mediumitalic: 'FZ-Poppins-MediumItalic' !important;
+    --color-dark-blue: #20386f;
+    --color-medium-blue: #114990;
+    --color-light-blue: #149ecf;
+    --color-gradient-hema-right: linear-gradient(to right, var(--color-medium-blue) 30%, var(--color-light-blue) 70%);
+    --color-gradient-hema-bottom: linear-gradient(to bottom, var(--color-light-blue), var(--color-medium-blue) 70%);
+
+
+    --font-reju-normal: 'Roboto-Regular' !important;
+    --font-reju-light: 'Roboto-Light' !important;
+    --font-reju-medium: 'Roboto-Medium' !important;
+    --font-reju-bold: 'Roboto-Bold' !important;
+    --font-reju-black: 'Roboto-Black' !important;
+    --color-dark-gray: #3A3A3C;
+    --color-strong-blue: #033FA1;
+    --color-reju-off-white: #FAFAFA;
+    --color-reju-light-gray: rgba(191, 191, 191, 0.96);
+
+    --font-trio-normal: 'DVN-Poppins-Regular' !important;
+    --font-trio-bold: 'DVN-Poppins-ExtraBold' !important;
+    --color-trio-medium-blue: #3952a2;
+    --color-trio-medium-blue-2: #1c4aa1;
+    --color-trio-light-blue: #ecf8ff;
+    --color-trio-gradient: linear-gradient(to bottom, #2869cc 40%, var(--color-trio-medium-blue) 60%);
+    --drop-shadow-trio: drop-shadow(0px 3px 3px rgba(23, 141, 224, 0.47)) drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.4));
+    --box-shadow-trio: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    --text-shadow-trio: 0px 0px 20px #fff,
+        0px 0px 20px #fff,
+        0px 0px 20px #fff,
+        0px 0px 20px #fff,
+        0px 0px 20px #fff,
+        0px 0px 20px #fff,
+        0px 0px 20px #fff,
+        0px 0px 20px #fff;
+
+    --color-plasma-dark-blue: #01389b;
+    --color-plasma-medium-blue: #00549c;
+    --color-plasma-gradient: linear-gradient(to bottom, var(--color-plasma-dark-blue) 40%, #0266ee 70%);
+    --bg-plasma: rgba(255, 255, 255, 0.5);
+
+
+    @media (min-width: 1200px) {
+        .container {
+            width: 1230px;
+            max-width: 1230px;
+        }
+    }
+
+    @media (min-width: 1900px) {
+        .container {
+            width: 1600px;
+            max-width: 1600px;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        font-size: 14px;
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-Regular';
+        src: url(fonts/BeVietnamPro-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-Medium';
+        src: url(fonts/BeVietnamPro-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-Light';
+        src: url(fonts/BeVietnamPro-Light.ttf);
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-Bold';
+        src: url(fonts/BeVietnamPro-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-SemiBold';
+        src: url(fonts/BeVietnamPro-SemiBold.ttf);
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-ExtraBold';
+        src: url(fonts/BeVietnamPro-ExtraBold.ttf);
+    }
+
+    @font-face {
+        font-family: 'BeVietnamPro-Black';
+        src: url(fonts/BeVietnamPro-Black.ttf);
+    }
+
+    @font-face {
+        font-family: 'FZ-Poppins-Regular';
+        src: url(fonts/FZ-Poppins-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: 'FZ-Poppins-Bold';
+        src: url(fonts/FZ-Poppins-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: 'FZ-Poppins-SemiBold';
+        src: url(fonts/FZ-Poppins-SemiBold.ttf);
+    }
+
+    @font-face {
+        font-family: 'FZ-Poppins-BoldItalic';
+        src: url(fonts/FZ-Poppins-BoldItalic.ttf);
+    }
+
+    @font-face {
+        font-family: 'FZ-Poppins-Italic';
+        src: url(fonts/FZ-Poppins-Italic.ttf);
+    }
+
+    @font-face {
+        font-family: 'FZ-Poppins-MediumItalic';
+        src: url(fonts/FZ-Poppins-MediumItalic.ttf);
+    }
+
+    @font-face {
+        font-family: 'Roboto-Regular';
+        src: url(fonts/Roboto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: 'Roboto-Light';
+        src: url(fonts/Roboto-Light.ttf);
+    }
+
+    @font-face {
+        font-family: 'Roboto-Medium';
+        src: url(fonts/Roboto-Medium.ttf);
+    }
+
+    @font-face {
+        font-family: 'Roboto-Bold';
+        src: url(fonts/Roboto-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: 'Roboto-Black';
+        src: url(fonts/Roboto-Black.ttf);
+    }
+
+    @font-face {
+        font-family: 'DVN-Poppins-Regular';
+        src: url(fonts/DVN-Poppins-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: 'DVN-Poppins-ExtraBold';
+        src: url(fonts/DVN-Poppins-ExtraBold.ttf);
+    }
+
+    .w-100 {
+        width: 100%;
+    }
+
+    .d-mobile {
+        display: none;
+        visibility: hidden;
+
+        @media only screen and (max-width: 1200px) {
+            display: block;
+            visibility: visible;
+        }
+    }
+
+    .d-desktop {
+
+        @media only screen and (max-width: 1200px) {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    }
+
+    .d-tablet {
+
+        @media only screen and (max-width: 767px) {
+            display: none !important;
+            visibility: hidden !important;
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: unset !important;
+            outline-offset: unset !important;
+        }
+    }
+
+    b {
+        font-family: var(--font-ldp-semibold);
+    }
+
+    .clr {
+        clear: both;
+    }
+
+    .t_br {
+        br {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+    }
+
+    .t_br_m {
+        @media (min-width: 767px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .img_auto {
+        margin: 0px auto;
+    }
+
+    .d-grid {
+        display: grid;
+        width: fit-content;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .d-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .d_bg {
+        background: no-repeat center / cover;
+        background-image: var(--url);
+        .p(30px 0px, 90px 0px, true);
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 1/1;
+
+        @media only screen and (max-width: 1200px) {
+            aspect-ratio: unset;
+        }
+    }
+
+    .d_bg_fade {
+        @media (max-width: 1200px) {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--url);
+        }
+    }
+
+    .d_bw {
+        display: flex;
+
+        @media (max-width: 1200px) {
+            --top_bw: 0px;
+            --size_bw: 100%;
+            background-position: center top var(--top_bw);
+            background-size: var(--size_bw);
+            background-color: white;
+        }
+
+        .container,
+        .row {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .row {
+            &>div {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .odometer-digit {
+        .odometer-digit-inner {
+            .odometer-ribbon {
+                .odometer-ribbon-inner {
+                    .odometer-value {
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .footer {
+        position: relative;
+        font-size: 14px;
+        background-color: var(--color-lightest-green);
+
+        @media only screen and (max-width: 767px) {
+            text-align: center;
+        }
+
+        .row {
+
+            >div {
+                @media only screen and (max-width: 767px) {
+                    padding: 30px 0px;
+                    border-bottom: 1px solid #DADADA;
+
+                    &:last-of-type {
+                        border: none;
+                    }
+
+                }
+
+                @media (min-width: 767px) and (max-width: 992px) {
+                    &:last-child {
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+
+        .top_1 {
+            color: var(--color-racing-green);
+            .p(0px 35px, 50px 0px);
+
+            @media only screen and (max-width: 767px) {
+                font-size: 13px;
+            }
+
+            a {
+                color: var(--color-racing-green);
+            }
+
+            .t_1 {
+                font-family: var(--font-ldp-bold);
+                font-size: 24px;
+                margin-bottom: 30px;
+                display: flex;
+                align-items: center;
+                gap: 7px;
+
+                @media only screen and (max-width: 767px) {
+                    justify-content: center;
+                }
+
+                &::before {
+                    content: "";
+                    width: 4px;
+                    height: 8px;
+                    background-color: var(--color-racing-green);
+                    display: block;
+                    position: relative;
+                    margin-top: 4px;
+                }
+            }
+
+            .t_2 {
+                font-family: var(--font-ldp-bold);
+                font-size: 16px;
+            }
+
+            .img_1 {
+                .m(0px auto 20px, 0px 0px 20px);
+            }
+
+            .d-flex {
+                gap: 10px;
+                margin: 20px 0px;
+
+                @media only screen and (max-width: 767px) {
+                    justify-content: center;
+                }
+            }
+
+            .bl_1 {
+                @media only screen and (max-width: 767px) {
+                    width: 90%;
+                    margin: 0px auto 20px;
+                    text-align: left;
+                }
+            }
+
+            .btn_1 {
+                .w(80%, 100%);
+                padding: 10px;
+                .m(0px auto 15px, 0px 0px 20px);
+                border-radius: 20px;
+                outline: none;
+                border: 1px solid #000;
+                background-color: transparent;
+                justify-content: center;
+            }
+
+        }
+
+        .top_2 {
+            .p(15px 35px 100px, 15px 0px);
+
+            .d-flex {
+                @media only screen and (max-width: 767px) {
+                    flex-direction: column;
+                }
+
+            }
+
+            p {
+                margin: 0px;
+            }
+        }
+    }
+}
