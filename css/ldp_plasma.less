@@ -1,3 +1,4 @@
+@import "ldp.css";
 @import (reference) "mixin.less";
 
 .ldp_plasma {
@@ -71,16 +72,14 @@
             width: 100%;
             .mt(30px, 60px);
 
-            @media (max-width: 767px) {
+            @media @mob {
                 grid-template-columns: 1fr;
             }
 
             .img_2 {
                 grid-row: span 2;
-                height: 0;
-                min-height: 100%;
 
-                @media (max-width: 767px) {
+                @media @mob {
                     grid-row: auto;
                     width: 150px;
                     height: auto;
@@ -115,12 +114,13 @@
                 grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
                 .gap(0px, 30px, 5px);
                 .m(-60px auto 10px, -100px auto 10px);
+                align-items: center;
 
-                @media (max-width: 1200px) {
+                @media @tab {
                     grid-template-columns: minmax(0, 175px) minmax(0, 1fr);
                 }
 
-                @media (max-width: 767px) {
+                @media @mob {
                     grid-template-columns: minmax(0, 80px) minmax(0, 1fr);
                 }
 
@@ -148,7 +148,7 @@
                 width: 100%;
                 align-items: normal;
 
-                @media (max-width: 767px) {
+                @media @mob {
                     grid-template-columns: 1fr;
                 }
 
@@ -176,8 +176,9 @@
         .d_1 {
             grid-template-columns: minmax(0, 1fr) 300px;
             .gap(0px, 15px);
+            align-items: center;
 
-            @media (max-width: 1200px) {
+            @media @tab {
                 grid-template-columns: minmax(0, 1fr) 120px;
             }
 
@@ -215,7 +216,7 @@
                     background: url(../images/ldp_plasma_20.png) no-repeat left top / 100% 100%;
                     border: unset;
 
-                    @media (max-width: 767px) {
+                    @media @mob {
                         background: unset;
                         border-top: 2px solid #001637;
                     }
@@ -228,14 +229,9 @@
             .gap(15px);
             width: 100%;
 
-            @media (max-width: 767px) {
+            @media @mob {
                 display: flex;
                 flex-direction: column-reverse;
-            }
-
-            .img_2 {
-                .h(unset, 0);
-                min-height: 100%;
             }
         }
 
@@ -269,7 +265,7 @@
             width: 100%;
             align-items: normal;
 
-            @media (max-width: 767px) {
+            @media @mob {
                 display: flex;
                 flex-direction: column-reverse;
             }
@@ -277,7 +273,6 @@
             .img_1 {
                 .h(500px, 0);
                 .m(0px auto);
-                min-height: 100%;
                 grid-row: span 2;
             }
         }
@@ -372,7 +367,7 @@
             width: 100%;
             .gap(15px, 0px);
 
-            @media (max-width: 767px) {
+            @media @mob {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
@@ -410,7 +405,7 @@
             width: 100%;
             z-index: 1;
 
-            @media (max-width: 767px) {
+            @media @mob {
                 background-image: unset;
             }
 
@@ -432,7 +427,7 @@
         text-align: center;
         aspect-ratio: 1920/2714;
 
-        @media (max-width: 767px) {
+        @media @mob {
             aspect-ratio: 1/4.5;
             background-color: var(--color-plasma-light-blue);
         }
@@ -456,7 +451,7 @@
             position: relative;
             --gradient: linear-gradient(to top, white 10%, transparent 35%);
 
-            @media (max-width: 767px) {
+            @media @mob {
                 grid-template-columns: 1fr;
             }
 
@@ -572,7 +567,7 @@
     display: grid;
     width: 100%;
 
-    @media (max-width: 767px) {
+    @media @mob {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 

@@ -1,3 +1,4 @@
+@import "fonts.css";
 body {
   --color-dark-green: #095c2c;
   --color-spring-green: #12b257;
@@ -47,6 +48,13 @@ body {
   --color-plasma-light-blue: #84c6ff;
   --color-plasma-gradient: linear-gradient(to bottom, var(--color-plasma-dark-blue) 40%, #0266ee 70%);
   --bg-plasma: rgba(255, 255, 255, 0.5);
+  --font-lume-normal: 'SVN-Gotham-Regular' !important;
+  --font-lume-book: 'SVN-Gotham-Book' !important;
+  --font-lume-bold: 'SVN-Gotham-Bold' !important;
+  --font-lume-black: 'SVN-Gotham-Black' !important;
+  --font-lume-lau: 'SVN-DaisyLau' !important;
+  --color-lume-slate: #4c677d;
+  --color-lume-dark: #374f67;
 }
 @media (min-width: 1200px) {
   body .container {
@@ -60,90 +68,10 @@ body {
     max-width: 1600px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body {
     font-size: 14px;
   }
-}
-@font-face {
-  font-family: 'BeVietnamPro-Regular';
-  src: url(fonts/BeVietnamPro-Regular.ttf);
-}
-@font-face {
-  font-family: 'BeVietnamPro-Medium';
-  src: url(fonts/BeVietnamPro-Medium.ttf);
-}
-@font-face {
-  font-family: 'BeVietnamPro-Light';
-  src: url(fonts/BeVietnamPro-Light.ttf);
-}
-@font-face {
-  font-family: 'BeVietnamPro-Bold';
-  src: url(fonts/BeVietnamPro-Bold.ttf);
-}
-@font-face {
-  font-family: 'BeVietnamPro-SemiBold';
-  src: url(fonts/BeVietnamPro-SemiBold.ttf);
-}
-@font-face {
-  font-family: 'BeVietnamPro-ExtraBold';
-  src: url(fonts/BeVietnamPro-ExtraBold.ttf);
-}
-@font-face {
-  font-family: 'BeVietnamPro-Black';
-  src: url(fonts/BeVietnamPro-Black.ttf);
-}
-@font-face {
-  font-family: 'FZ-Poppins-Regular';
-  src: url(fonts/FZ-Poppins-Regular.ttf);
-}
-@font-face {
-  font-family: 'FZ-Poppins-Bold';
-  src: url(fonts/FZ-Poppins-Bold.ttf);
-}
-@font-face {
-  font-family: 'FZ-Poppins-SemiBold';
-  src: url(fonts/FZ-Poppins-SemiBold.ttf);
-}
-@font-face {
-  font-family: 'FZ-Poppins-BoldItalic';
-  src: url(fonts/FZ-Poppins-BoldItalic.ttf);
-}
-@font-face {
-  font-family: 'FZ-Poppins-Italic';
-  src: url(fonts/FZ-Poppins-Italic.ttf);
-}
-@font-face {
-  font-family: 'FZ-Poppins-MediumItalic';
-  src: url(fonts/FZ-Poppins-MediumItalic.ttf);
-}
-@font-face {
-  font-family: 'Roboto-Regular';
-  src: url(fonts/Roboto-Regular.ttf);
-}
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url(fonts/Roboto-Light.ttf);
-}
-@font-face {
-  font-family: 'Roboto-Medium';
-  src: url(fonts/Roboto-Medium.ttf);
-}
-@font-face {
-  font-family: 'Roboto-Bold';
-  src: url(fonts/Roboto-Bold.ttf);
-}
-@font-face {
-  font-family: 'Roboto-Black';
-  src: url(fonts/Roboto-Black.ttf);
-}
-@font-face {
-  font-family: 'DVN-Poppins-Regular';
-  src: url(fonts/DVN-Poppins-Regular.ttf);
-}
-@font-face {
-  font-family: 'DVN-Poppins-ExtraBold';
-  src: url(fonts/DVN-Poppins-ExtraBold.ttf);
 }
 body .w-100 {
   width: 100%;
@@ -152,19 +80,19 @@ body .d-mobile {
   display: none;
   visibility: hidden;
 }
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1199px) {
   body .d-mobile {
     display: block;
     visibility: visible;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1199px) {
   body .d-desktop {
     display: none !important;
     visibility: hidden !important;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .d-tablet {
     display: none !important;
     visibility: hidden !important;
@@ -199,7 +127,6 @@ body .img_auto {
 body .d-grid {
   display: grid;
   width: fit-content;
-  align-items: center;
   align-content: center;
   justify-content: center;
 }
@@ -216,17 +143,17 @@ body .d_bg {
   overflow: hidden;
   aspect-ratio: 1/1;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   body .d_bg {
     padding: 30px 0px;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1199px) {
   body .d_bg {
     aspect-ratio: unset;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   body .d_bg_fade {
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), var(--url);
   }
@@ -234,7 +161,7 @@ body .d_bg {
 body .d_bw {
   display: flex;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   body .d_bw {
     --top_bw: 0px;
     --size_bw: 100%;
@@ -260,17 +187,26 @@ body .odometer-digit .odometer-digit-inner .odometer-ribbon .odometer-ribbon-inn
   justify-content: center;
   width: 100%;
 }
+body .f_height {
+  height: 0;
+  min-height: 100%;
+}
+@media (max-width: 767px) {
+  body .f_height {
+    height: unset;
+  }
+}
 body .footer {
   position: relative;
   font-size: 14px;
   background-color: var(--color-lightest-green);
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer {
     text-align: center;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer .row > div {
     padding: 30px 0px;
     border-bottom: 1px solid #DADADA;
@@ -293,7 +229,7 @@ body .footer .top_1 {
     padding: 0px 35px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer .top_1 {
     font-size: 13px;
   }
@@ -309,7 +245,7 @@ body .footer .top_1 .t_1 {
   align-items: center;
   gap: 7px;
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer .top_1 .t_1 {
     justify-content: center;
   }
@@ -339,12 +275,12 @@ body .footer .top_1 .d-flex {
   gap: 10px;
   margin: 20px 0px;
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer .top_1 .d-flex {
     justify-content: center;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer .top_1 .bl_1 {
     width: 90%;
     margin: 0px auto 20px;
@@ -379,7 +315,7 @@ body .footer .top_2 {
     padding: 15px 35px 100px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   body .footer .top_2 .d-flex {
     flex-direction: column;
   }

@@ -1,3 +1,4 @@
+@import "ldp.css";
 @import (reference) "mixin.less";
 
 .ldp_trio {
@@ -40,7 +41,7 @@
             left: 30px;
             top: 30px;
 
-            @media (max-width: 767px) {
+            @media @mob {
                 position: unset;
                 margin: 0px auto 10px;
                 width: 50%;
@@ -69,7 +70,7 @@
             font-family: var(--font-trio-bold);
             width: 100%;
 
-            @media (max-width: 767px) {
+            @media @mob {
                 grid-auto-flow: row;
             }
 
@@ -130,7 +131,7 @@
                 margin: 0px auto;
                 width: var(--width-icon);
 
-                @media (max-width: 767px) {
+                @media @mob {
                     --width-icon: 40px
                 }
             }
@@ -160,7 +161,7 @@
         .bl_1 {
             .gap(20px, 30px);
 
-            @media (max-width: 767px) {
+            @media @mob {
                 flex-direction: column-reverse;
             }
 
@@ -298,13 +299,13 @@
             position: relative;
             .gap(15px, 0px, 30px);
 
-            @media (max-width: 1200px) {
+            @media @tab {
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             > :nth-child(1) {
-                @media (max-width: 1200px) {
+                @media @tab {
                     grid-column: 1 / -1;
                 }
             }
@@ -426,7 +427,7 @@
     display: grid;
     width: 100%;
 
-    @media (max-width: 767px) {
+    @media @mob {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 

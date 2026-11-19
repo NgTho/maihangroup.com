@@ -1,409 +1,398 @@
+@import "ldp.css";
+@import (reference) "mixin.less";
+
 .ldp_lume {
-    --color-blue-gray: #3a4a59;
-    --color-slate: #4c677d;
-    --font-ldp-normal: 'BeVietnamPro-Regular' !important;
-    --font-ldp-medium: 'BeVietnamPro-Medium' !important;
-    --font-ldp-light: 'BeVietnamPro-Light' !important;
-    --font-ldp-bold: 'BeVietnamPro-Bold' !important;
-    --font-ldp-black: 'BeVietnamPro-Black' !important;
-    color: var(--color-blue-gray);
-    font-size: 22px;
-    font-family: var(--font-ldp-normal);
+    color: var(--color-lume-slate);
+    .fs(14px, 22px);
+    font-family: var(--font-lume-normal);
 
-    @media only screen and (max-width: 767px) {
-        font-size: 14px;
-    }
-
-    @font-face {
-        font-family: 'BeVietnamPro-Regular';
-        src: url(fonts/BeVietnamPro-Regular.ttf);
-    }
-
-    @font-face {
-        font-family: 'BeVietnamPro-Medium';
-        src: url(fonts/BeVietnamPro-Medium.ttf);
-    }
-
-    @font-face {
-        font-family: 'BeVietnamPro-Light';
-        src: url(fonts/BeVietnamPro-Light.ttf);
-    }
-
-    @font-face {
-        font-family: 'BeVietnamPro-Bold';
-        src: url(fonts/BeVietnamPro-Bold.ttf);
-    }
-
-    @font-face {
-        font-family: 'BeVietnamPro-Black';
-        src: url(fonts/BeVietnamPro-Black.ttf);
-    }
-
-    .d-mobile {
-        display: none;
-        visibility: hidden;
-
-        @media only screen and (max-width: 1200px) {
-            display: block;
-            visibility: visible;
-        }
-    }
-
-    .d-desktop {
-
-        @media only screen and (max-width: 1200px) {
-            display: none !important;
-            visibility: hidden !important;
-        }
+    a {
+        color: var(--color-lume-slate);
     }
 
     b {
-        font-family: var(--font-ldp-bold);
-    }
-
-    .clr {
-        clear: both;
-    }
-
-    .img_auto {
-        margin: 0px auto;
-    }
-
-    .d-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(0, auto));
-        align-items: center;
-    }
-
-    .d-flex {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-family: var(--font-lume-bold);
     }
 
     .d_bg {
-        background: no-repeat center / cover;
-        padding: 60px 30px;
-        position: relative;
-        overflow: hidden;
-        aspect-ratio: 1/1;
-
-        @media only screen and (max-width: 1200px) {
-            padding: 30px 0px;
-            aspect-ratio: unset;
-        }
-    }
-
-    .d_gb_90 {
-        padding: 90px 30px;
-
-        @media only screen and (max-width: 1200px) {
-            padding: 30px 0px;
-        }
+        .p(30px 0px, 60px 0px);
+        aspect-ratio: unset;
     }
 
     .h_1 {
-        font-family: var(--font-ldp-black);
-        font-size: 68px;
-        line-height: 1.4;
+        .fs(26px, 58px);
+        font-family: var(--font-lume-black);
+        text-transform: uppercase;
         text-align: center;
-        margin-bottom: 60px;
+    }
 
-        @media only screen and (max-width: 767px) {
-            font-size: 28px;
-            line-height: 38px;
-            margin-bottom: 30px;
+    .top_1 {
+        --url: url(../images/ldp_lume_1.jpg);
+        aspect-ratio: 1920/1397;
+        .p(10px 0px, 30px 0px);
+
+        @media @mob {
+            aspect-ratio: 1602/1397;
+        }
+
+        .t_1 {
+            .m(0px);
+            .ta(left);
+        }
+
+        .t_2 {
+            .fs(16px, 32px);
+            font-family: var(--font-lume-book);
         }
     }
 
-    .h_1_line {
-        @media only screen and (max-width: 767px) {
-            br {
-                display: none;
+    .top_2 {
+        text-align: center;
+        .p(30px 0px 0px, 60px 0px 0px);
+
+        .t_1 {
+            .fs(24px, 42px);
+            .mb(45px, 60px);
+        }
+
+        .bl_1 {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            .gap(15px, 30px);
+
+            @media @mob {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .img_1 {
+                .h(75px, 125px);
+                .m(0px auto 10px);
+            }
+
+            .t_2 {
+                .fs(12px, 16px);
             }
         }
     }
 
-    .h_2 {
-        color: #fff;
-        padding: 10px 25px;
-        background-image: linear-gradient(to right, transparent, var(--color-blue-gray) 30%);
-        font-family: var(--font-ldp-black);
-        font-size: 42px;
-        line-height: 1.5;
+    .top_3 {
+        --url: url(../images/ldp_lume_9.jpg);
 
-        @media only screen and (max-width: 767px) {
-            font-size: 28px;
-            line-height: unset;
-            padding: 10px 20px;
+        .t_1 {
+            color: white;
+            font-family: var(--font-lume-black);
+            .fs(24px, 42px);
+            .p(8px 10px, 15px 20px);
+            .mb(10px, 20px);
+            .lh(1.3);
+            background-image: linear-gradient(to right, var(--color-lume-slate) 70%, transparent);
         }
-    }
 
-    .h_22 {
-        background-image: linear-gradient(to right, var(--color-blue-gray) 30%, transparent);
-    }
-
-    .h_2_line {
-        @media only screen and (max-width: 767px) {
-            br {
-                display: none;
-            }
-        }
-    }
-
-    .h_3 {
-        font-size: 42px;
-        position: relative;
-        text-align: justify;
-
-        @media only screen and (max-width: 767px) {
-            font-size: 18px;
-        }
-    }
-
-    .t_num {
-        font-size: 66px;
-        color: var(--color-blue-gray);
-        font-family: var(--font-ldp-black);
-        margin: 0px;
-        position: relative;
-
-        @media only screen and (max-width: 767px) {
-            font-size: 48px;
-        }
-    }
-
-
-    .logo {
-        margin: 0px auto 30px;
-        width: 350px;
-
-        @media only screen and (max-width: 767px) {
-            margin: 0px auto 20px;
-            width: 175px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .container {
-            width: 1230px;
+        .t_2 {
+            font-family: var(--font-lume-book);
+            .fs(14px, 20px);
+            text-align: justify;
         }
     }
 
     .top_4 {
-        .t_2 {
-            padding-bottom: 30px;
-            margin-bottom: 60px;
+        grid-template-columns: 0.15fr 1fr 0.7fr;
+        overflow: hidden;
+        .w(100%);
+        .p(30px 0px, 0px);
 
-            &:after {
-                content: "";
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                bottom: 0px;
-                width: 80%;
-                height: 2px;
-                background: var(--color-blue-gray);
-                margin: 0px auto;
-            }
+        @media @mob {
+            grid-template-columns: 0fr 1fr 0fr;
         }
 
         .bl_1 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 100px;
-            text-align: center;
+            flex-direction: column;
+            .gap(30px, 60px);
+            .p(0px 15px, 15% 60px);
+            background-color: white;
+            box-shadow: 0px 0px 81px 0px rgba(32, 44, 54, 0.65);
+            position: relative;
+            z-index: 1;
+            justify-content: space-between;
 
-            @media only screen and (max-width: 767px) {
-                gap: 30px;
+            @media @mob {
+                box-shadow: unset;
+            }
+        }
+
+        .t_1 {
+            .fs(32px, 66px);
+            .p(10px 15px, 0px 20px 10px);
+        }
+
+        .t_2 {
+            .fs(14px, 18px);
+        }
+
+        .t_3 {
+            .fs(14px, 20px);
+        }
+
+        .img_2 {
+            .w(100%);
+            object-fit: cover;
+        }
+    }
+
+    .top_5 {
+        .bl_1 {
+            color: white;
+            background-color: #a5b3be;
+            .p(15px 0px, 20px 0px);
+
+            .t_1 {
+                font-family: var(--font-lume-black);
+                .fs(26px, 46px);
             }
 
-            .img_1 {
-                margin-bottom: 10px;
+            .t_2 {
+                .fs(18px, 38px);
+            }
+        }
 
-                @media only screen and (max-width: 767px) {
-                    width: 75px;
+        .bl_2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            .w(100%);
+
+            @media @mob {
+                grid-template-columns: 1fr;
+            }
+
+            .d_1 {
+                .p(15px, 30px);
+                .minh(39vw, 20vw);
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: flex-end;
+                justify-content: right;
+
+                &::before {
+                    --img: url('../images/ldp_lume_12.jpg');
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    z-index: -2;
+                    .bg(false);
+                    background-image: var(--img);
+                    transition: transform 0.5s ease;
+                }
+
+                &:hover {
+                    &::before {
+                        transform: scale(1.2);
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    &::before {
+                        --img: url('../images/ldp_lume_13.jpg');
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    &::before {
+                        --img: url('../images/ldp_lume_14.jpg');
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    &::before {
+                        --img: url('../images/ldp_lume_15.jpg');
+                    }
                 }
             }
 
-            .t_3 {
-                font-family: var(--font-ldp-bold);
-            }
         }
     }
 
     .top_6 {
-        .d_bg {
-            text-align: center;
-        }
-
-        .div_1 {
-            @media only screen and (max-width: 1200px) {
-                overflow-x: scroll;
-                margin: 0px 0px 20px;
-            }
-
-            .div_2 {
-                @media only screen and (max-width: 1200px) {
-                    width: max-content;
-                }
-            }
-
+        .h_1 {
+            .mb(10px, 30px);
         }
 
         .bl_1 {
-            margin-right: 30px;
-        }
+            .pl(30px, 0px, true);
+            .mb(30px, 0px, true);
 
-        .img_2 {
-            @media only screen and (max-width: 767px) {
-                width: 50px;
-            }
-        }
+            .t_1 {
+                .w(100%, 90%, true);
+                .p(10px 0px, 60px 0px, true);
+                border-bottom: 2px solid var(--color-lume-slate);
+                .m(0px);
 
-        .d_1 {
-            @media only screen and (max-width: 767px) {
-                img {
-                    width: 50px;
+                &:last-of-type {
+                    border-bottom: unset;
+                }
+
+                @media @tab {
+                    border-bottom: unset;
+                    display: list-item;
                 }
             }
-
         }
 
         .bl_2 {
-            justify-content: space-between;
-        }
+            --url: url(../images/ldp_lume_22.png);
+            aspect-ratio: 1/1;
+            .p(15px, 30px);
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            .w(100%);
+            .mb(10px);
 
-        .t_1 {
-            margin-bottom: 30px;
-        }
+            .d_1 {
+                &:nth-child(1) {
+                    grid-area: 1 / 1;
+                    align-self: start;
+                    justify-self: start;
+                }
 
-        .t_2 {
-            font-size: 68px;
-            font-family: var(--font-ldp-bold);
+                &:nth-child(2),
+                &:nth-child(3) {
+                    justify-self: end;
+                    text-align: right;
 
-            @media only screen and (max-width: 767px) {
-                font-size: 32px;
-            }
-        }
+                    .t_1 {
+                        margin-left: auto;
+                    }
+                }
 
-        .t_3 {
-            font-size: 26px;
-            font-family: var(--font-ldp-medium);
+                &:nth-child(2) {
+                    grid-area: 1 / 2;
+                    align-self: start;
+                }
 
-            @media only screen and (max-width: 767px) {
-                font-size: 14px;
-            }
-        }
+                &:nth-child(3) {
+                    grid-area: 1 / 2 / 3 / 3;
+                    align-self: center;
+                }
 
-        .t_33 {
-            color: #fff;
-            background-image: linear-gradient(to bottom, transparent, var(--color-blue-gray) 30%);
-            padding: 100px 15px 15px;
-            margin-top: -100px;
+                .t_1 {
+                    .p(5px 15px, 10px 30px);
+                    .m(0px);
+                    .bg('../images/ldp_lume_21.svg', no-repeat, center, 100% 100%);
+                    .fs(14px, 38px);
+                    width: fit-content;
+                }
 
-            @media only screen and (max-width: 767px) {
-                padding: 50px 10px 10px;
-                margin-top: -50px;
+                .t_2 {
+                    .m(0px);
+                    .fs(12px, 20px);
+                }
+
+                .t_3 {
+                    font-family: var(--font-lume-book);
+                    .fs(10px, 14px);
+                    .m(0px);
+                }
             }
         }
 
         .t_4 {
-            text-align: left;
-            font-size: 32px;
-            font-family: var(--font-ldp-medium);
+            .fs(16px, 36px);
+            text-align: center;
+            .lh(unset, 1.3);
+            text-transform: uppercase;
+        }
 
-            @media only screen and (max-width: 767px) {
-                font-size: 18px;
+        .bl_3 {
+            --url: url(../images/ldp_lume_23.png);
+
+            .d_1 {
+
+                &:nth-child(2) {
+                    grid-area: 1 / 2;
+                    align-self: start;
+                    justify-self: end;
+                }
+
+                &:nth-child(3) {
+                    grid-area: 2 / 1;
+                    align-self: end;
+                    justify-self: start;
+                    text-align: left;
+                }
+
+                &:nth-child(4) {
+                    grid-area: 2 / 2;
+                    align-self: end;
+                    justify-self: end;
+                    text-align: right;
+
+                    .t_1 {
+                        margin-left: auto;
+                    }
+
+                }
             }
         }
 
-        .t_5 {
-            font-family: var(--font-ldp-bold);
-        }
 
     }
 
     .top_7 {
-        .img_1 {
-            @media only screen and (max-width: 767px) {
-                width: 200px;
-                margin: 20px auto;
-            }
-        }
+        background-color: var(--color-lume-slate);
 
-        .img_2 {
-            margin: 30px auto 0px;
-
-            @media only screen and (max-width: 767px) {
-                margin: 20px 0px;
-            }
-        }
-
-        .t_1 {
-            font-size: 50px;
-            line-height: 60px;
-
-            @media only screen and (max-width: 767px) {
-                font-size: 28px;
-                line-height: unset;
-            }
-        }
-
-        .t_2 {
-            font-size: 38px;
-            font-family: var(--font-ldp-medium);
-
-            @media only screen and (max-width: 767px) {
-                font-size: 26px;
-            }
-        }
-
-        .t_3 {
-            color: var(--color-blue-gray);
-            font-size: 32px;
+        .bl_1 {
+            .gap(20px, 100px);
             text-align: center;
-            margin: 0px;
 
-            @media only screen and (max-width: 767px) {
-                font-size: 22px;
+            .d_1 {
+                .img_1 {
+                    .mb(5px, 10px);
+                }
+
+                .t_1 {
+                    .fs(18px, 42px);
+                    color: white;
+                    .m(0px);
+                }
             }
         }
     }
 
     .top_8 {
-        .d_1 {
-            background: no-repeat center / 100% 100%;
-            padding: 20px 50px 30px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 30px;
+        --url: url(../images/ldp_lume_19.jpg);
+        aspect-ratio: 1920/2290;
+        .p(15px 0px 30px, 30px 0px);
 
-            @media only screen and (max-width: 767px) {
-                padding: 10px 25px 25px;
-                gap: 15px;
-            }
-
-            .img_1 {
-                border-radius: 50%;
-
-                @media only screen and (max-width: 767px) {
-                    width: 60px;
-                }
-            }
-
-            .t_2 {
-                text-align: right;
-                margin: 0px;
-                padding-left: 30px;
-                border-left: 2px solid var(--color-blue-gray);
-
-                @media only screen and (max-width: 767px) {
-                    padding-left: 15px;
-                }
-            }
+        .t_1 {
+            .fs(18px, 64px);
+            color: white;
+            .lh(unset, 1.3);
         }
     }
+
+    .top_9 {
+        --url: url(../images/ldp_lume_20.jpg);
+        color: white;
+        text-align: center;
+
+
+        .img_1 {
+            .m(0px auto 20px);
+            .mw(200px, 800px, 400px);
+        }
+
+        .t_1 {
+            font-family: var(--font-lume-lau);
+            .fs(22px, 46px);
+        }
+
+        .t_2 {
+            .fs(14px, 24px);
+            .lh(1.3);
+            .m(0px);
+            font-family: var(--font-lume-book);
+        }
+    }
+
+
+
 }

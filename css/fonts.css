@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'BeVietnamPro-Regular';
+  src: url(fonts/BeVietnamPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-Medium';
+  src: url(fonts/BeVietnamPro-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-Light';
+  src: url(fonts/BeVietnamPro-Light.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-Bold';
+  src: url(fonts/BeVietnamPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-SemiBold';
+  src: url(fonts/BeVietnamPro-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-ExtraBold';
+  src: url(fonts/BeVietnamPro-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-Black';
+  src: url(fonts/BeVietnamPro-Black.ttf);
+}
+
+@font-face {
+  font-family: 'FZ-Poppins-Regular';
+  src: url(fonts/FZ-Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'FZ-Poppins-Bold';
+  src: url(fonts/FZ-Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'FZ-Poppins-SemiBold';
+  src: url(fonts/FZ-Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'FZ-Poppins-BoldItalic';
+  src: url(fonts/FZ-Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: 'FZ-Poppins-Italic';
+  src: url(fonts/FZ-Poppins-Italic.ttf);
+}
+
+@font-face {
+  font-family: 'FZ-Poppins-MediumItalic';
+  src: url(fonts/FZ-Poppins-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url(fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url(fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url(fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+  font-family: 'DVN-Poppins-Regular';
+  src: url(fonts/DVN-Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'DVN-Poppins-ExtraBold';
+  src: url(fonts/DVN-Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: 'SVN-Gotham-Regular';
+  src: url(fonts/SVN-Gotham-Regular.otf);
+}
+
+@font-face {
+  font-family: 'SVN-Gotham-Light';
+  src: url(fonts/SVN-Gotham-Light.otf);
+}
+
+@font-face {
+  font-family: 'SVN-Gotham-Bold';
+  src: url(fonts/SVN-Gotham-Bold.otf);
+}
+
+@font-face {
+  font-family: 'SVN-Gotham-Book';
+  src: url(fonts/SVN-Gotham-Book.otf);
+}
+
+@font-face {
+  font-family: 'SVN-Gotham-Black';
+  src: url(fonts/SVN-Gotham-Black.otf);
+}
+
+@font-face {
+  font-family: 'SVN-Gotham-Bold-Italic';
+  src: url(fonts/SVN-Gotham-Bold-Italic.otf);
+}
+
+@font-face {
+  font-family: 'SVN-DaisyLau';
+  src: url(fonts/SVN-DaisyLau.otf);
+}

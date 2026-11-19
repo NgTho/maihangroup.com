@@ -1,3 +1,4 @@
+@import "ldp.css";
 .ldp_plasma {
   color: var(--color-plasma-dark-blue);
   font-size: clamp(14px, 1.66666667vw, 32px);
@@ -86,8 +87,6 @@
 }
 .ldp_plasma .top_1 .bl_1 .img_2 {
   grid-row: span 2;
-  height: 0;
-  min-height: 100%;
 }
 @media (max-width: 767px) {
   .ldp_plasma .top_1 .bl_1 .img_2 {
@@ -138,8 +137,9 @@
   grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
   gap: 30px;
   margin: -100px auto 10px;
+  align-items: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .ldp_plasma .top_2 .bl_1 .d_1 {
     gap: 5px;
   }
@@ -233,6 +233,7 @@
 .ldp_plasma .top_3 .d_1 {
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: 15px;
+  align-items: center;
 }
 @media (max-width: 767px) {
   .ldp_plasma .top_3 .d_1 {
@@ -313,15 +314,6 @@
     flex-direction: column-reverse;
   }
 }
-.ldp_plasma .top_3 .s_1 .img_2 {
-  height: 0;
-  min-height: 100%;
-}
-@media (max-width: 767px) {
-  .ldp_plasma .top_3 .s_1 .img_2 {
-    height: unset;
-  }
-}
 .ldp_plasma .top_3 .s_2 {
   padding: 60px 0px;
   background-color: var(--bg-plasma);
@@ -387,7 +379,6 @@
 .ldp_plasma .top_4 .bl_1 .img_1 {
   height: 0;
   margin: 0px auto;
-  min-height: 100%;
   grid-row: span 2;
 }
 @media (max-width: 767px) {
@@ -743,7 +734,7 @@
   display: grid;
   width: 100%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .bl_product {
     gap: 30px 15px;
   }
@@ -762,7 +753,7 @@
   box-shadow: unset;
   border: 1px solid var(--color-trio-medium-blue);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .bl_product .d_product {
     border-radius: 20px;
   }
@@ -783,7 +774,7 @@
   width: auto;
   margin: 0px auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .bl_product .d_product .img_1 img {
     height: 250px;
   }

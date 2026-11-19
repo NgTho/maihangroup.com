@@ -1,3 +1,4 @@
+@import "ldp.css";
 .ldp_mhg {
   color: var(--color-racing-green);
   font-size: clamp(26px, 1.77083333vw, 34px);

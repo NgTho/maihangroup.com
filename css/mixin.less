@@ -1,7 +1,21 @@
 @scale-xl: 1.37;
 @bp-xl: 1920px;
 @bp-mobile: 767px;
-@bp-tablet: 1200px;
+@bp-tablet: 1199px;
+@mob: ~"(max-width: @{bp-mobile})";
+@tab: ~"(max-width: @{bp-tablet})";
+
+.mob(@rules) {
+    @media @mob {
+        @rules();
+    }
+}
+
+.tab(@rules) {
+    @media @tab {
+        @rules();
+    }
+}
 
 .fs(@min, @base) {
     @max: (floor((@base * @scale-xl / 2)) * 2);

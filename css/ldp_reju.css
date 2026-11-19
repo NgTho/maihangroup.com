@@ -1,3 +1,4 @@
+@import "ldp.css";
 .ldp_reju {
   color: var(--color-dark-gray);
   font-size: clamp(16px, 1.66666667vw, 32px);
@@ -485,6 +486,11 @@
   width: 100%;
 }
 @media (max-width: 1200px) {
+  .bl_product {
+    gap: 1200px;
+  }
+}
+@media (max-width: 767px) {
   .bl_product {
     gap: 30px 15px;
   }

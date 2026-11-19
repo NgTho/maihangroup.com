@@ -1,3 +1,4 @@
+@import "ldp.css";
 .ldp_trio {
   color: var(--color-trio-medium-blue-2);
   font-size: clamp(14px, 1.5625vw, 30px);
