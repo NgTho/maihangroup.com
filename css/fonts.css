@@ -14,6 +14,16 @@
 }
 
 @font-face {
+  font-family: 'BeVietnamPro-LightItalic';
+  src: url(fonts/BeVietnamPro-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: 'BeVietnamPro-ExtraLight';
+  src: url(fonts/BeVietnamPro-ExtraLight.ttf);
+}
+
+@font-face {
   font-family: 'BeVietnamPro-Bold';
   src: url(fonts/BeVietnamPro-Bold.ttf);
 }

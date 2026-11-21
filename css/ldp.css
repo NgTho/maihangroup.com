@@ -10,6 +10,8 @@ body {
   --font-ldp-normal: 'BeVietnamPro-Regular' !important;
   --font-ldp-medium: 'BeVietnamPro-Medium' !important;
   --font-ldp-light: 'BeVietnamPro-Light' !important;
+  --font-ldp-lightitalic: 'BeVietnamPro-LightItalic' !important;
+  --font-ldp-extralight: 'BeVietnamPro-ExtraLight' !important;
   --font-ldp-bold: 'BeVietnamPro-Bold' !important;
   --font-ldp-semibold: 'BeVietnamPro-SemiBold' !important;
   --font-ldp-extrabold: 'BeVietnamPro-ExtraBold' !important;
@@ -55,6 +57,10 @@ body {
   --font-lume-lau: 'SVN-DaisyLau' !important;
   --color-lume-slate: #4c677d;
   --color-lume-dark: #374f67;
+  --color-mhmp-medium-green: #006a39;
+  --color-mhmp-light-green: #00ba64;
+  --color-mhmp-gradient: linear-gradient(to bottom, var(--color-mhmp-medium-green) 40%, var(--color-mhmp-light-green) 70%);
+  --color-mhmp-gradient-bg: linear-gradient(180deg, #ffffff 0%, #d5eee0 30%, #cce9d8 46%, #d0ebdc 58%, #e4f3ea 80%, #fbfcfb 100%);
 }
 @media (min-width: 1200px) {
   body .container {

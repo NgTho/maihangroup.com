@@ -1,0 +1,479 @@
+@import "ldp.css";
+@import (reference) "mixin.less";
+
+.ldp_mhmp {
+    color: var(--color-mhmp-medium-green);
+    .fs(14px, 22px);
+    font-family: var(--font-ldp-normal);
+
+    a {
+        color: var(--color-mhmp-medium-green);
+    }
+
+    b {
+        font-family: var(--font-ldp-bold);
+    }
+
+    .d_bg {
+        .p(30px 0px, 60px 0px);
+        aspect-ratio: unset;
+    }
+
+    .h_1 {
+        font-family: var(--font-ldp-extrabold);
+        .fs(26px, 60px);
+        text-transform: uppercase;
+        background-image: var(--color-mhmp-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        .p(5px 0px, 10px 0px);
+
+
+    }
+
+    .top_1 {
+        --url: url(../images/ldp_mhmp_1.jpg);
+        aspect-ratio: 1/1;
+        text-align: center;
+        align-items: flex-end;
+
+        @media @mob {
+            flex-direction: column;
+            justify-content: space-between;
+            aspect-ratio: 1/1.2;
+        }
+
+        .img_1 {
+            .po(unset, absolute);
+            top: 60px;
+            left: 60px;
+            .w(100px, 250px, 200px);
+            .m(0px auto);
+        }
+
+        .t_1 {
+            .fs(24px, 86px);
+            .m(0px);
+        }
+
+        .t_2 {
+            .fs(20px, 64px);
+            .m(0px);
+        }
+    }
+
+    .top_2 {
+        --url: url(../images/ldp_mhmp_2.jpg);
+
+        .bl_1 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            .gap(60px);
+            .w(100%);
+            .p(0px, 30px);
+            .rad(30px);
+            border: 2px solid white;
+
+            @media @mob {
+                grid-template-columns: 1fr;
+                border: unset;
+            }
+
+            .d_1 {
+                .rad(30px);
+                background-color: var(--bg-plasma);
+                .p(15px, 30px);
+                position: relative;
+                text-align: center;
+
+                &:last-of-type {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        .left(unset, -30px);
+                        .top(-30px, 0px);
+                        .w(90%, 2px);
+                        .h(2px, 0);
+                        .minh(unset, 100%);
+                        background-color: white;
+                        display: block;
+
+                        @media @mob {}
+
+                    }
+                }
+
+                .t_1 {
+                    .fs(20px, 38px);
+                    .m(0px);
+                }
+
+                .t_2 {
+                    .fs(26px, 46px);
+                }
+
+                .t_3 {
+                    .m(0px);
+                    .ta(justify);
+                }
+            }
+        }
+    }
+
+    .top_3 {
+        background: var(--color-mhmp-gradient-bg);
+
+        .bl_1 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            .gap(15px, 30px);
+            .w(100%);
+
+            @media @mob {
+                grid-template-columns: 1fr;
+            }
+
+            &:first-of-type {
+                @media @mob {
+
+                    > :nth-child(1) {
+                        order: 2;
+                    }
+
+                    > :nth-child(2) {
+                        order: 1;
+                    }
+                }
+            }
+
+            .d_1 {
+                .rad(30px, 60px, 40px);
+                .bg('../images/ldp_mhmp_30.png', no-repeat, center, 100% 100%);
+                .p(40px, 15%, 10%);
+                position: relative;
+                text-align: center;
+                align-items: flex-end;
+
+                @media @mob {
+                    .bg('../images/ldp_mhmp_31.png', no-repeat, center, 100% 100%);
+                }
+
+                .t_1 {
+                    .fs(14px, 20px);
+                    .m(0px);
+                    font-family: var(--font-ldp-bold);
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        .m(20px auto, 40px auto);
+                        width: 100%;
+                        height: 1px;
+                        background-color: var(--color-mhmp-medium-green);
+                    }
+                }
+
+                .t_2 {
+                    .ta(justify);
+                    font-family: var(--font-ldp-light);
+                }
+            }
+
+            .d_2 {
+                align-items: flex-start;
+                .bg('../images/ldp_mhmp_31.png', no-repeat, center, 100% 100%);
+            }
+        }
+
+        .img_1 {
+            .w(100%);
+            .p(30px 0px);
+        }
+    }
+
+    .top_4 {
+        --url: url(../images/ldp_mhmp_7.jpg);
+        //aspect-ratio: 1920/1315;
+        color: white;
+        text-align: center;
+        .p(30px 0px);
+
+        @media (min-width: 1200px) {
+            .container {
+                width: 1350px;
+                max-width: 1350px;
+            }
+        }
+
+        @media (min-width: 1900px) {
+            .container {
+                width: 1800px;
+                max-width: 1800px;
+            }
+        }
+
+        .s_1 {
+            flex-direction: column;
+            .gap(30px);
+
+            @media @mob {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .bl_1 {
+            grid-template-columns: 1fr 1fr 1.2fr 1fr 1fr 1fr;
+            .gap(15px);
+            .p(0px, 0px 30px 30px);
+            .bg('../images/ldp_mhmp_32.png', no-repeat, center bottom, 100% 85%);
+            .w(100%);
+
+            @media @tab {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                background: unset;
+            }
+
+            @media @mob {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+                > :nth-child(3),
+                > :nth-child(6) {
+                    grid-column: 1 / -1;
+                    justify-self: center;
+                    width: calc((100% - 15px) / 2 * 1.5);
+                }
+            }
+
+            .d_1 {
+                display: grid;
+                grid-template-rows: 155px 70px 1fr 155px;
+                align-items: flex-end;
+
+                @media @mob {
+                    grid-template-rows: 120px 70px 1fr 150px;
+                }
+
+                p {
+                    .m(0px);
+                }
+
+                .t_1 {
+                    font-family: var(--font-ldp-extrabold);
+                    .bg('../images/ldp_mhmp_8.svg', no-repeat, center top 15px, contain);
+                    .w(100px, 110px);
+                    .h(130px, 140px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    justify-self: center;
+                    font-size: 22px;
+
+                    @media @mob {
+                        font-size: 14px;
+                    }
+                }
+
+                .t_2 {
+                    font-family: var(--font-ldp-extrabold);
+                    font-size: 12px;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        margin: 5px auto;
+                        width: 50px;
+                        height: 1px;
+                        background-color: white;
+                    }
+                }
+
+                .t_3 {
+                    font-size: 12px;
+                    font-family: var(--font-ldp-light);
+                    align-self: flex-start;
+                    .mb(10px);
+                }
+
+                img {
+                    margin: 0px auto;
+                    .h(150px, 155px);
+                }
+            }
+
+
+        }
+
+        .bl_2 {
+            .t_1 {
+                font-family: var(--font-ldp-medium);
+                .fs(20px, 44px);
+                .p(10px 0px);
+                background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), transparent);
+            }
+
+            .t_2 {
+                --color-mhmp-gradient: linear-gradient(to bottom, white 40%, transparent 70%);
+                .fs(44px, 132px);
+                .m(0px);
+            }
+
+            .t_3 {
+                .fs(20px, 78px);
+                .mt(-20px, -60px);
+            }
+        }
+
+
+    }
+
+    .top_5 {
+        --url: url(../images/ldp_mhmp_15.jpg);
+        aspect-ratio: 1920/1471;
+        text-align: center;
+        align-items: flex-end;
+        color: white;
+
+        @media @mob {
+            aspect-ratio: 1/1.3;
+        }
+
+        .t_1 {
+            font-family: var(--font-ldp-semibold);
+            .fs(22px, 64px);
+            .m(0px);
+        }
+
+        .t_2 {
+            font-family: var(--font-ldp-extrabold);
+            .fs(42px, 120px);
+            .m(0px);
+        }
+
+        .t_3 {
+            font-family: var(--font-ldp-extrabold);
+            .fs(18px, 48px);
+            .m(0px);
+        }
+
+        .t_4 {
+            font-family: var(--font-ldp-lightitalic);
+            .fs(14px, 38px);
+            .m(0px);
+        }
+    }
+
+    .top_6 {
+        background: var(--color-mhmp-gradient-bg);
+        text-align: center;
+        .p(30px 0px, 60px 0px 0px);
+
+        .h_1 {
+            .mb(30px, 60px);
+        }
+
+        .bl_1 {
+            grid-template-columns: 1fr 1fr;
+            .w(100%);
+            .gap(30px, 0px);
+
+            @media @mob {
+                grid-template-columns: 1fr;
+            }
+
+            .d_1 {
+                .po(relative);
+
+                &:last-of-type {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0px;
+                        top: 5%;
+                        width: 2px;
+                        .h(35%);
+                        background-color: var(--color-mhmp-medium-green);
+                        display: block;
+
+                        @media @mob {
+                            content: unset;
+                        }
+
+                    }
+
+                }
+
+                .img_1 {
+                    .h(300px, 500px, true);
+                    .m(0px auto 20px, 0px auto 30px);
+                }
+
+                .t_1 {
+                    font-family: var(--font-ldp-extrabold);
+                    .fs(16px, 28px);
+                    .p(10px 15px);
+                    background-color: white;
+                    .rad(10px);
+                    .w(fit-content);
+                    .m(0px auto, 0px auto 60px);
+                }
+            }
+
+            .d_2 {
+                grid-template-columns: repeat(6, minmax(0, 1fr));
+                .gap(15px);
+                place-items: center;
+                .w(100%);
+                .p(20px 0px, 60px, 30px 15px);
+                background-color: white;
+
+                @media @mob {
+                    background-color: unset;
+                }
+
+                >* {
+                    grid-column: span 2;
+                }
+
+                > :nth-child(4) {
+                    grid-column: 2 / span 2;
+                }
+
+                > :nth-child(5) {
+                    grid-column: 4 / span 2;
+                }
+
+                .p_1 {
+                    img {
+                        .w(66px);
+                        .h(66px);
+                        .m(0px auto 10px);
+                    }
+
+                    .t_2 {
+                        font-family: var(--font-ldp-light);
+                        .fs(12px, 15px);
+                        .m(0px);
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .top_7 {
+        --url: url(../images/ldp_mhmp_28.jpg);
+        text-align: center;
+        color: white;
+
+        .t_1 {
+            font-family: var(--font-ldp-extrabold);
+            .fs(28px, 58px);
+            .m(0px);
+        }
+
+        .t_2 {
+            font-family: var(--font-ldp-extralight);
+        }
+    }
+}

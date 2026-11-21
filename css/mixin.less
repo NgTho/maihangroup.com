@@ -1,9 +1,17 @@
 @scale-xl: 1.37;
 @bp-xl: 1920px;
-@bp-mobile: 767px;
+@bp-wide: 1900px;
 @bp-tablet: 1199px;
-@mob: ~"(max-width: @{bp-mobile})";
+@bp-mobile: 767px;
+@wd: ~"(min-width: @{bp-wide})";
 @tab: ~"(max-width: @{bp-tablet})";
+@mob: ~"(max-width: @{bp-mobile})";
+
+.wd(@rules) {
+    @media @wd {
+        @rules();
+    }
+}
 
 .mob(@rules) {
     @media @mob {
