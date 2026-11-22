@@ -34,7 +34,7 @@
         position: relative;
 
         .bl_1 {
-            position: absolute;
+            .po(absolute, unset);
             top: 0;
             bottom: 0;
             left: 0px;
@@ -44,16 +44,14 @@
             z-index: 9;
 
             @media @mob {
-                position: unset;
                 margin: 30px 0px 0px;
             }
 
             .img_1 {
-                margin: 0px 0px 20px;
+                .m(0px 0px 20px, 0px 0px 15px);
 
                 @media @mob {
                     width: 50%;
-                    margin: 0px 0px 15px;
                 }
             }
 
@@ -92,31 +90,23 @@
             &::after {
                 content: "";
                 display: block;
-                margin: 30px auto;
+                .m(30px auto, 20px auto);
                 width: 150px;
                 height: 2px;
                 background-color: var(--color-dark-gray);
 
-                @media @mob {
-                    margin: 20px auto;
-                }
             }
         }
 
         .bl_1 {
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 60px;
+            .gap(60px, 15px, 30px);
             grid-auto-columns: 1fr;
-            margin-top: 60px;
+            .mt(60px, 30px);
 
-            @media @tab {
-                gap: 30px;
-            }
 
             @media @mob {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 15px;
-                margin-top: 30px;
             }
 
             .d_1 {
@@ -153,11 +143,8 @@
             font-family: var(--font-reju-bold);
 
             &:nth-of-type(3) {
-                margin-top: 60px;
+                .mt(60px, 30px);
 
-                @media @mob {
-                    margin-top: 30px;
-                }
             }
         }
 
@@ -172,11 +159,10 @@
             color: white;
             --url: url(../images/ldp_reju_13.jpg);
             padding: 30px 0px;
-            margin-bottom: 60px;
+            .mb(60px, 30px);
 
             @media @mob {
                 background-position: right;
-                margin-bottom: 30px;
             }
 
             .t_1 {
@@ -192,11 +178,8 @@
 
         .bl_2 {
             text-align: center;
-            padding: 60px 90px;
+            .p(60px 90px, 30px 0px);
 
-            @media @mob {
-                padding: 30px 0px;
-            }
 
             .t_1 {
                 color: var(--color-strong-blue);
@@ -211,22 +194,18 @@
 
         .bl_3 {
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            margin-bottom: 90px;
+            .mb(90px, 60px);
 
             @media @mob {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
-                margin-bottom: 60px;
             }
         }
     }
 
     .top_5 {
         .h_1 {
-            margin-bottom: 60px;
+            .mb(60px, 30px);
 
-            @media @mob {
-                margin-bottom: 30px;
-            }
         }
 
         .t_1 {
@@ -245,12 +224,11 @@
 
         .bl_1 {
             justify-content: space-between;
-            margin-bottom: 30px;
+            .mb(30px, 45px);
 
             @media @mob {
                 flex-direction: column;
                 gap: 10px;
-                margin-bottom: 45px;
             }
 
             &:nth-of-type(odd) {
@@ -260,11 +238,8 @@
             }
 
             &>* {
-                width: 39%;
+                .w(39%, 100%);
 
-                @media @mob {
-                    width: 100%;
-                }
             }
 
         }
@@ -278,38 +253,28 @@
         }
 
         .bl_2 {
-            gap: 60px;
+            .gap(60px, 0px);
 
             @media @mob {
-                gap: 0px;
                 flex-direction: column;
             }
 
             .d_1 {
-                width: 50%;
+                .w(50%, 100%);
 
-                @media @mob {
-                    width: 100%;
-                }
             }
 
             .d_2 {
-                gap: 30px;
+                .gap(30px, 15px);
 
-                @media @mob {
-                    gap: 15px;
-                }
 
                 .img_1 {
                     width: 55%;
                 }
 
                 .img_2 {
-                    margin-bottom: 20px;
+                    .mb(20px, 10px);
 
-                    @media @mob {
-                        margin-bottom: 10px;
-                    }
                 }
             }
         }
@@ -319,12 +284,11 @@
         .bl_1 {
             --url: url(../images/ldp_reju_39.jpg);
             aspect-ratio: 1920/330;
-            margin-bottom: -3.5%;
+            .mb(-3.5%, 0px);
             padding: 15px 0px 30px;
 
             @media @mob {
                 aspect-ratio: unset;
-                margin-bottom: 0px;
                 background-position: center bottom, center;
                 background-size: contain, contain;
                 background-repeat: no-repeat, no-repeat;
@@ -334,11 +298,8 @@
 
         .bl_4 {
             align-items: end;
-            gap: 15px;
+            .gap(15px, 5px);
 
-            @media @mob {
-                gap: 5px;
-            }
 
             img {
                 flex: 1 1 0;
@@ -351,11 +312,8 @@
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 15px;
             align-items: center;
-            margin-bottom: 10%;
+            .mb(10%, unset);
 
-            @media @mob {
-                margin-bottom: unset;
-            }
 
             .bl_5_col {
                 display: flex;
@@ -373,11 +331,8 @@
 
                 &:nth-of-type(3),
                 &:nth-of-type(4) {
-                    top: 10%;
+                    .top(10%, -10%);
 
-                    @media @mob {
-                        top: -10%;
-                    }
                 }
             }
         }
@@ -400,11 +355,8 @@
 
         .h_1 {
             color: white;
-            margin-bottom: 60px;
+            .mb(60px, 30px);
 
-            @media @mob {
-                margin-bottom: 30px;
-            }
         }
 
         .bl_1 {
@@ -425,12 +377,9 @@
 
                 img {
                     margin-bottom: 10px;
-                    height: 120px;
+                    .h(120px, 60px);
                     object-fit: contain;
 
-                    @media @mob {
-                        height: 60px;
-                    }
                 }
 
                 .t_1 {
@@ -472,24 +421,18 @@
                 padding: 20px 15px;
 
                 .img_2 {
-                    width: 30%;
+                    .w(30%, 50%);
                     position: relative;
 
-                    @media @mob {
-                        width: 50%;
-                    }
 
                     &:after {
                         content: "";
                         display: block;
-                        margin: 30px auto;
+                        .m(30px auto, 15px auto);
                         width: 150px;
                         height: 2px;
                         background-color: var(--color-dark-gray);
 
-                        @media @mob {
-                            margin: 15px auto;
-                        }
                     }
                 }
 
@@ -535,7 +478,7 @@
 
 .bl_product {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    .gap(30px 15px, 60px 30px, 1200px);
+    .gap(60px 30px, 30px 15px, 1200px);
     display: grid;
     width: 100%;
 
@@ -568,12 +511,9 @@
         }
 
         .p_1 {
-            padding: 15px 20px;
+            .p(15px 20px, 10px);
             text-align: center;
 
-            @media @mob {
-                padding: 10px;
-            }
 
             .t_1 {
                 .fs(14px, 16px);

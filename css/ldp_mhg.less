@@ -58,7 +58,7 @@
         grid-template-columns: repeat(6, auto);
         justify-items: center;
         align-items: center;
-        .gap(15px, 20px 30px);
+        .gap(20px 30px, 15px);
         width: fit-content;
 
         @media @mob {
@@ -96,11 +96,8 @@
         }
 
         .d_1 {
-            margin: 0px auto 120px;
+            .m(0px auto 120px, 0px auto 60px);
 
-            @media @mob {
-                margin: 0px auto 60px;
-            }
         }
 
         .t_1 {
@@ -118,11 +115,8 @@
 
         .t_2 {
             text-align: center;
-            margin: 0px 0px 60px;
+            .m(0px 0px 60px, 0px 0px 30px);
 
-            @media @mob {
-                margin: 0px 0px 30px;
-            }
         }
 
         .t_3 {
@@ -134,14 +128,10 @@
         .d_1 {
             background: no-repeat center / 100% 100%;
             background-image: url(../images/index_8.png);
-            padding: 60px;
-            margin: 60px 0px 0px;
+            .p(60px, 30px);
+            .m(60px 0px 0px, 30px 0px 0px);
             width: 100%;
 
-            @media @mob {
-                padding: 30px;
-                margin: 30px 0px 0px;
-            }
         }
     }
 
@@ -201,8 +191,8 @@
                 --border-width: 5px;
 
                 position: relative;
-                width: var(--w);
-                padding: 60px 30px;
+                .w(var(--w), false, unset);
+                .p(60px 30px, false, 30px 15px);
                 text-align: center;
                 background-color: white;
                 border-radius: 50px;
@@ -211,14 +201,11 @@
                 box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
                 transform: translateX(var(--x)) perspective(var(--persp)) rotateY(var(--r)) scale(var(--s));
                 transition: transform ease-in-out 0.8s;
-                margin: 0 ~"calc(-1 * (1 - var(--scale)) * var(--w) / 2)";
+                .m(0 ~"calc(-1 * (1 - var(--scale)) * var(--w) / 2)", false, 0px auto);
 
                 @media @tab {
                     --border-width: 2px;
                     transform: unset;
-                    margin: 0px auto;
-                    width: unset;
-                    padding: 30px 15px;
                     border-radius: 30px;
                     max-width: 500px;
 
@@ -262,12 +249,9 @@
 
                 hr {
                     width: 90%;
-                    margin: 60px auto;
+                    .m(60px auto, false, 30px auto);
                     border-top: 2px solid var(--color-racing-green);
 
-                    @media @tab {
-                        margin: 30px auto;
-                    }
                 }
 
                 .t_3 {
@@ -329,14 +313,12 @@
             }
 
             .d_1 {
-                position: absolute;
-                width: 20%;
+                .po(absolute, false, unset);
+                .w(20%, false, 100%);
                 transform: rotate(-19.5deg);
 
                 @media @tab {
-                    position: unset;
                     transform: unset !important;
-                    width: 100%;
                     text-align: left !important;
                     padding: 0px 15px;
                     color: unset !important;
@@ -442,11 +424,8 @@
 
                 .p_1 {
                     display: flex;
-                    gap: 30px;
+                    .gap(30px, false, 20px);
 
-                    @media @tab {
-                        gap: 20px;
-                    }
 
                     &::before {
                         content: "";
@@ -503,11 +482,8 @@
                         width: 65%;
                         position: absolute;
                         right: 0px;
-                        top: -50px;
+                        .top(-50px, false, -30px);
 
-                        @media @tab {
-                            top: -30px;
-                        }
                     }
 
                     .img_3 {
@@ -560,15 +536,12 @@
                         width: 70%;
                         position: absolute;
                         right: 0px;
-                        bottom: -80px;
+                        .bottom(-80px, false, -20px);
 
                         @media (min-width:1600px) {
                             width: 60%;
                         }
 
-                        @media @tab {
-                            bottom: -20px;
-                        }
                     }
 
                     .img_10 {
@@ -605,11 +578,8 @@
                         position: absolute;
                         right: 0px;
                         top: 0px;
-                        width: 55%;
+                        .w(55%, false, 59%);
 
-                        @media @tab {
-                            width: 59%;
-                        }
                     }
 
                     .img_20 {
@@ -696,11 +666,8 @@
 
             .p_3 {
                 &::after {
-                    height: 320px;
+                    .h(320px, false, stretch);
 
-                    @media @tab {
-                        height: stretch;
-                    }
                 }
             }
         }
@@ -724,11 +691,8 @@
         }
 
         .bl_1 {
-            width: 50%;
+            .w(50%, false, unset);
 
-            @media @tab {
-                width: unset;
-            }
 
             .t_1 {
                 .fs(28px, 43px);
@@ -741,13 +705,12 @@
 
         .bl_2 {
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px 20px;
+            .gap(20px 20px, 20px 15px);
             margin: 0 auto;
             width: fit-content;
 
             @media @mob {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 20px 15px;
             }
 
             .d_1 {
@@ -755,30 +718,24 @@
                 border-radius: 20px;
                 box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
                 text-align: center;
-                padding: 20px;
+                .p(20px, 10px);
                 display: flex;
                 justify-content: end;
                 flex-direction: column;
-                transition: all ease 0.3s;
+                transition: all ease 0.5s;
 
                 &:hover {
                     transition: all ease 0.5s;
-                    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+                    box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.25);
                 }
 
-                @media @mob {
-                    padding: 10px;
-                }
 
                 .img_1 {
                     margin: 0px auto 10px;
                     width: 100%;
-                    height: 150px;
+                    .h(150px, 100px);
                     object-fit: scale-down;
 
-                    @media @mob {
-                        height: 100px;
-                    }
                 }
 
                 .t_1 {
@@ -790,12 +747,9 @@
                 .img_2 {
                     border-radius: 15px;
                     width: 100%;
-                    height: 150px;
+                    .h(150px, 110px);
                     object-fit: cover;
 
-                    @media @mob {
-                        height: 110px;
-                    }
                 }
             }
         }
@@ -991,11 +945,8 @@
             }
 
             .d_1 {
-                padding: 15px;
+                .p(15px, 10px);
 
-                @media @mob {
-                    padding: 10px;
-                }
 
                 b {
                     font-family: var(--font-ldp-black);
@@ -1010,17 +961,11 @@
                 }
 
                 .slider_mhg {
-                    width: 170px;
+                    .w(170px, ~"calc((100vw - 85px) / 2)", false, 210px);
                     overflow: hidden;
                     border-radius: 15px;
 
-                    @media @wd {
-                        width: 210px;
-                    }
 
-                    @media @mob {
-                        width: ~"calc((100vw - 85px) / 2)";
-                    }
 
                     .img_2 {
                         border-radius: 0px;
@@ -1045,7 +990,7 @@
 
         .d_1 {
             background: no-repeat center / 100% 100%;
-            .p(30px 15px, 60px 30px);
+            .p(60px 30px, 30px 15px);
             background-image: url(../images/index_107.png);
 
             .owl-stage {
@@ -1114,12 +1059,11 @@
                 overflow: hidden;
                 border-radius: 20px;
                 box-shadow: 0px 0px 20px white;
-                padding: 30px;
+                .p(30px, 15px);
                 border: 2px solid white;
                 aspect-ratio: 1/1;
 
                 @media @mob {
-                    padding: 15px;
                     text-align: left !important;
                     display: unset !important;
                 }

@@ -15,7 +15,7 @@
     }
 
     .d_bg {
-        .p(30px 0px, 60px 0px);
+        .p(60px 0px, 30px 0px);
         aspect-ratio: unset;
     }
 
@@ -29,7 +29,7 @@
     .top_1 {
         --url: url(../images/ldp_lume_1.jpg);
         aspect-ratio: 1920/1397;
-        .p(10px 0px, 30px 0px);
+        .p(30px 0px, 10px 0px);
 
         @media @mob {
             aspect-ratio: 1602/1397;
@@ -48,23 +48,23 @@
 
     .top_2 {
         text-align: center;
-        .p(30px 0px 0px, 60px 0px 0px);
+        .p(60px 0px 0px, 30px 0px 0px);
 
         .t_1 {
             .fs(24px, 42px);
-            .mb(45px, 60px);
+            .mb(60px, 45px);
         }
 
         .bl_1 {
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            .gap(15px, 30px);
+            .gap(30px, 15px);
 
             @media @mob {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .img_1 {
-                .h(75px, 125px);
+                .h(125px, 75px);
                 .m(0px auto 10px);
             }
 
@@ -81,8 +81,8 @@
             color: white;
             font-family: var(--font-lume-black);
             .fs(24px, 42px);
-            .p(8px 10px, 15px 20px);
-            .mb(10px, 20px);
+            .p(15px 20px, 8px 10px);
+            .mb(20px, 10px);
             .lh(1.3);
             background-image: linear-gradient(to right, var(--color-lume-slate) 70%, transparent);
         }
@@ -98,7 +98,7 @@
         grid-template-columns: 0.15fr 1fr 0.7fr;
         overflow: hidden;
         .w(100%);
-        .p(30px 0px, 0px);
+        .p(0px, 30px 0px);
 
         @media @mob {
             grid-template-columns: 0fr 1fr 0fr;
@@ -106,8 +106,8 @@
 
         .bl_1 {
             flex-direction: column;
-            .gap(30px, 60px);
-            .p(0px 15px, 15% 60px);
+            .gap(60px, 30px);
+            .p(15% 60px, 0px 15px);
             background-color: white;
             box-shadow: 0px 0px 81px 0px rgba(32, 44, 54, 0.65);
             position: relative;
@@ -121,7 +121,7 @@
 
         .t_1 {
             .fs(32px, 66px);
-            .p(10px 15px, 0px 20px 10px);
+            .p(0px 20px 10px, 10px 15px);
         }
 
         .t_2 {
@@ -142,7 +142,7 @@
         .bl_1 {
             color: white;
             background-color: #a5b3be;
-            .p(15px 0px, 20px 0px);
+            .p(20px 0px, 15px 0px);
 
             .t_1 {
                 font-family: var(--font-lume-black);
@@ -156,15 +156,14 @@
 
         .bl_2 {
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            .w(100%);
 
             @media @mob {
                 grid-template-columns: 1fr;
             }
 
             .d_1 {
-                .p(15px, 30px);
-                .minh(39vw, 20vw);
+                .p(30px, 15px);
+                .minh(20vw, 39vw);
                 position: relative;
                 overflow: hidden;
                 display: flex;
@@ -212,16 +211,16 @@
 
     .top_6 {
         .h_1 {
-            .mb(10px, 30px);
+            .mb(30px, 10px);
         }
 
         .bl_1 {
-            .pl(30px, 0px, true);
-            .mb(30px, 0px, true);
+            .pl(0px, 30px, true);
+            .mb(0px, 30px, true);
 
             .t_1 {
-                .w(100%, 90%, true);
-                .p(10px 0px, 60px 0px, true);
+                .w(90%, 100%, true);
+                .p(60px 0px, 10px 0px, true);
                 border-bottom: 2px solid var(--color-lume-slate);
                 .m(0px);
 
@@ -239,11 +238,9 @@
         .bl_2 {
             --url: url(../images/ldp_lume_22.png);
             aspect-ratio: 1/1;
-            .p(15px, 30px);
-            display: grid;
+            .p(30px, 15px);
             grid-template-columns: repeat(2, minmax(0, 1fr));
             grid-template-rows: repeat(2, minmax(0, 1fr));
-            .w(100%);
             .mb(10px);
 
             .d_1 {
@@ -274,7 +271,7 @@
                 }
 
                 .t_1 {
-                    .p(5px 15px, 10px 30px);
+                    .p(10px 30px, 5px 15px);
                     .m(0px);
                     .bg('../images/ldp_lume_21.svg', no-repeat, center, 100% 100%);
                     .fs(14px, 38px);
@@ -297,7 +294,7 @@
         .t_4 {
             .fs(16px, 36px);
             text-align: center;
-            .lh(unset, 1.3);
+            .lh(1.3, unset);
             text-transform: uppercase;
         }
 
@@ -340,12 +337,12 @@
         background-color: var(--color-lume-slate);
 
         .bl_1 {
-            .gap(20px, 100px);
+            .gap(100px, 20px);
             text-align: center;
 
             .d_1 {
                 .img_1 {
-                    .mb(5px, 10px);
+                    .mb(10px, 5px);
                 }
 
                 .t_1 {
@@ -360,12 +357,12 @@
     .top_8 {
         --url: url(../images/ldp_lume_19.jpg);
         aspect-ratio: 1920/2290;
-        .p(15px 0px 30px, 30px 0px);
+        .p(30px 0px, 15px 0px 30px);
 
         .t_1 {
             .fs(18px, 64px);
             color: white;
-            .lh(unset, 1.3);
+            .lh(1.3, unset);
         }
     }
 
@@ -377,7 +374,7 @@
 
         .img_1 {
             .m(0px auto 20px);
-            .mw(200px, 800px, 400px);
+            .mw(800px, 200px, 400px);
         }
 
         .t_1 {

@@ -84,7 +84,6 @@
 .ldp_mhmp .top_2 .bl_1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 60px;
-  width: 100%;
   padding: 30px;
   border-radius: 30px;
   border: 2px solid white;
@@ -165,7 +164,6 @@
 .ldp_mhmp .top_3 .bl_1 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 30px;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .ldp_mhmp .top_3 .bl_1 {
@@ -280,7 +278,6 @@
   gap: 15px;
   padding: 0px 30px 30px;
   background: url(../images/ldp_mhmp_32.png) no-repeat center bottom / 100% 85%;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .ldp_mhmp .top_4 .bl_1 {
@@ -306,12 +303,12 @@
 }
 .ldp_mhmp .top_4 .bl_1 .d_1 {
   display: grid;
-  grid-template-rows: 155px 70px 1fr 155px;
+  grid-template-rows: 155px 70px auto auto;
   align-items: flex-end;
 }
 @media (max-width: 767px) {
   .ldp_mhmp .top_4 .bl_1 .d_1 {
-    grid-template-rows: 120px 70px 1fr 150px;
+    grid-template-rows: 120px 70px auto auto;
   }
 }
 .ldp_mhmp .top_4 .bl_1 .d_1 p {
@@ -442,7 +439,6 @@
 }
 .ldp_mhmp .top_6 .bl_1 {
   grid-template-columns: 1fr 1fr;
-  width: 100%;
   gap: 0px;
 }
 @media (max-width: 767px) {
@@ -505,7 +501,6 @@
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 15px;
   place-items: center;
-  width: 100%;
   padding: 60px;
   background-color: white;
 }

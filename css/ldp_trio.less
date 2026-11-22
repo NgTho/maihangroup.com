@@ -16,7 +16,7 @@
 
     .d_bg {
         aspect-ratio: unset;
-        .p(30px 0px, 90px 0px 60px, true);
+        .p(90px 0px 60px, 30px 0px, true);
     }
 
     .h_1 {
@@ -34,15 +34,14 @@
     .top_1 {
         --url: url(../images/ldp_trio_1.jpg);
         text-align: center;
-        .p(30px 0px, 50px 0px);
+        .p(50px 0px, 30px 0px);
 
         .img_1 {
-            position: absolute;
+            .po(absolute, unset);
             left: 30px;
             top: 30px;
 
             @media @mob {
-                position: unset;
                 margin: 0px auto 10px;
                 width: 50%;
             }
@@ -50,7 +49,7 @@
 
         .t_1 {
             .fs(16px, 24px);
-            .mb(20px, 30px);
+            .mb(30px, 20px);
         }
 
         .t_2 {
@@ -68,7 +67,6 @@
             gap: 15px;
             .fs(14px, 16px);
             font-family: var(--font-trio-bold);
-            width: 100%;
 
             @media @mob {
                 grid-auto-flow: row;
@@ -96,20 +94,20 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            .p(5px 0px, 10px 0px);
+            .p(10px 0px, 5px 0px);
             filter: var(--drop-shadow-trio);
         }
 
         .t_2 {
             .fs(16px, 24px);
             color: black;
-            .mt(0px, 30px, true);
+            .mt(30px, 0px, true);
         }
 
         .bl_1 {
             grid-auto-flow: row;
             grid-auto-rows: 1fr;
-            .gap(30px, 60px);
+            .gap(60px, 30px);
             margin: 30px auto 0px;
         }
 
@@ -119,8 +117,8 @@
             position: relative;
             flex-direction: column;
             box-shadow: var(--box-shadow-trio);
-            .p(15px, 30px);
-            .rad(15px, 30px);
+            .p(30px, 15px);
+            .rad(30px, 15px);
 
             .img_3 {
                 --width-icon: 80px;
@@ -159,14 +157,14 @@
         --url: url(../images/ldp_trio_7.jpg);
 
         .bl_1 {
-            .gap(20px, 30px);
+            .gap(30px, 20px);
 
             @media @mob {
                 flex-direction: column-reverse;
             }
 
             .img_1 {
-                .w(100%, 40%);
+                .w(40%, 100%);
             }
 
             .t_1 {
@@ -189,7 +187,7 @@
 
         .h_1 {
             .fs(22px, 36px);
-            .mb(30px, 60px, true);
+            .mb(60px, 30px, true);
         }
     }
 
@@ -202,16 +200,16 @@
 
         .t_2 {
             .fs(18px, 36px);
-            .mb(10px, 30px);
+            .mb(30px, 10px);
         }
 
         .bl_1 {
             grid-template-columns: repeat(3, minmax(0, 1fr));
             background-color: white;
-            .p(10px, 30px, 15px);
-            .rad(15px, 30px, true);
-            .gap(15px, 60px, 25px);
-            .mb(30px, 60px, true);
+            .p(30px, 10px, 15px);
+            .rad(30px, 15px, true);
+            .gap(60px, 15px, 25px);
+            .mb(60px, 30px, true);
             box-shadow: 0px 5px 10px 10px rgba(186, 210, 250, 0.5);
         }
 
@@ -219,15 +217,13 @@
             border: 2px solid var(--color-trio-medium-blue-2);
             width: 100%;
             height: auto;
-            .rad(15px, 25px, true);
+            .rad(25px, 15px, true);
         }
 
         .bl_2 {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            .gap(25px, 60px, true);
-            .gap(15px, 60px);
-            width: 100%;
+            .gap(60px, 15px, 25px);
             grid-auto-columns: 1fr;
 
             > :first-child {
@@ -261,8 +257,7 @@
 
         .bl_2 {
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            .gap(15px, 60px 30px, 25px);
-            width: 100%;
+            .gap(60px 30px, 15px, 25px);
 
             > :nth-child(-n + 2) {
                 grid-column: 1 / -1;
@@ -274,7 +269,7 @@
             }
 
             img {
-                .p(5px, 15px);
+                .p(15px, 5px);
                 background-color: white;
                 box-shadow: unset;
             }
@@ -297,7 +292,7 @@
 
         .bl_1 {
             position: relative;
-            .gap(15px, 0px, 30px);
+            .gap(0px, 15px, 30px);
 
             @media @tab {
                 display: grid;
@@ -315,7 +310,7 @@
                     width: 100%;
                 }
 
-                .po(unset, absolute, true);
+                .po(absolute, unset, true);
 
                 .t_3 {
                     font-family: var(--font-trio-bold);
@@ -323,7 +318,7 @@
                     margin: 0px auto;
                     position: relative;
                     text-shadow: var(--text-shadow-trio);
-                    .top(-10px, -30px);
+                    .top(-30px, -10px);
                 }
 
                 &:nth-of-type(1) {
@@ -360,11 +355,11 @@
         .t_3 {
             background-color: var(--color-trio-medium-blue-2);
             padding: 10px 20px;
-            border-radius: 15px;
+            .rad(12px);
             color: white;
             text-align: center;
             width: fit-content;
-            .m(10px 0px 30px, 20px 0px 0px, true);
+            .m(20px 0px 0px, 10px 0px 30px, true);
             box-shadow: var(--text-shadow-trio);
         }
     }
@@ -408,7 +403,7 @@
             display: flex;
             gap: 15px;
             align-items: baseline;
-            .mb(10px, 30px);
+            .mb(30px, 10px);
         }
 
         .t_1 {
@@ -423,7 +418,7 @@
 
 .bl_product {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    .gap(30px 15px, 60px 30px, true);
+    .gap(60px 30px, 30px 15px, true);
     display: grid;
     width: 100%;
 
@@ -435,7 +430,7 @@
         width: 100%;
         min-width: 0;
         overflow: hidden;
-        .rad(15px, 30px, 20px);
+        .rad(30px, 15px, 20px);
         background-color: white;
         box-shadow: unset;
         border: 1px solid var(--color-trio-medium-blue);
@@ -447,7 +442,7 @@
                 display: block;
                 object-fit: cover;
                 transition: transform ease 0.5s;
-                .h(150px, 400px, 250px);
+                .h(400px, 150px, 250px);
                 width: auto;
                 margin: 0px auto;
 
@@ -458,7 +453,7 @@
         }
 
         .p_1 {
-            .p(10px, 15px 20px);
+            .p(15px 20px, 10px);
 
             .t_1 {
                 .fs(16px, 30px);

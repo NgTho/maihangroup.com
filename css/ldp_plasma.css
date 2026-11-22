@@ -72,7 +72,6 @@
 .ldp_plasma .top_1 .bl_1 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: 15px;
-  width: 100%;
   margin-top: 60px;
 }
 @media (max-width: 767px) {
@@ -138,6 +137,7 @@
   gap: 30px;
   margin: -100px auto 10px;
   align-items: center;
+  width: fit-content;
 }
 @media (max-width: 1199px) {
   .ldp_plasma .top_2 .bl_1 .d_1 {
@@ -154,7 +154,7 @@
     margin: -60px auto 10px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .ldp_plasma .top_2 .bl_1 .d_1 {
     grid-template-columns: minmax(0, 175px) minmax(0, 1fr);
   }
@@ -192,7 +192,6 @@
 .ldp_plasma .top_2 .bl_1 .d_2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
-  width: 100%;
   align-items: normal;
 }
 @media (max-width: 767px) {
@@ -240,7 +239,7 @@
     gap: 0px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
   .ldp_plasma .top_3 .d_1 {
     grid-template-columns: minmax(0, 1fr) 120px;
   }
@@ -306,7 +305,6 @@
 .ldp_plasma .top_3 .s_1 {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
   gap: 15px;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .ldp_plasma .top_3 .s_1 {
@@ -338,7 +336,6 @@
 .ldp_plasma .top_3 .s_2 .bl_2 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 60px;
-  width: 100%;
 }
 @media (max-width: 767px) {
   .ldp_plasma .top_3 .s_2 .bl_2 {
@@ -362,7 +359,6 @@
 .ldp_plasma .top_4 .bl_1 {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   gap: 15px;
-  width: 100%;
   align-items: normal;
 }
 @media (max-width: 767px) {
@@ -486,6 +482,11 @@
   text-align: center;
   padding: 60px 0px 90px;
 }
+@media (max-width: 1199px) {
+  .ldp_plasma .top_7 {
+    padding: 60px 0px;
+  }
+}
 @media (max-width: 767px) {
   .ldp_plasma .top_7 {
     padding: 30px 0px;
@@ -500,7 +501,6 @@
   grid-template-columns: 0.7fr 0.8fr 0.9fr 1fr 0.8fr 0.7fr;
   align-items: end;
   padding: 0px 30px;
-  width: 100%;
   gap: 0px;
 }
 @media (max-width: 767px) {
@@ -545,7 +545,7 @@
 }
 .ldp_plasma .top_7 .bl_2 {
   background-image: linear-gradient(to top, white, white, white, white, transparent 100%);
-  padding: 90px 0px 0px;
+  padding: 6.5% 0px 0px;
   position: absolute;
   bottom: 0px;
   left: 0px;

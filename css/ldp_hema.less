@@ -40,7 +40,7 @@
         -webkit-text-fill-color: transparent;
         text-transform: uppercase;
         font-family: var(--font-hema-bold);
-        padding: 3px 0px;
+        padding: 5px 0px;
     }
 
     .h_1_2 {
@@ -50,11 +50,10 @@
 
     .img_sp {
         -webkit-box-reflect: below 0 linear-gradient(to bottom, transparent 90%, rgba(255, 255, 255, 1));
-        margin: 0px auto;
+        .m(0px auto, false, 20px auto 0px);
 
         @media @tab {
             max-height: 300px;
-            margin: 20px auto 0px;
         }
     }
 
@@ -88,12 +87,11 @@
         }
 
         .img_3 {
-            position: absolute;
+            .po(absolute, unset);
             top: 30px;
             right: 30px;
 
             @media @mob {
-                position: unset;
                 margin: 0px auto 10px;
             }
         }
@@ -104,20 +102,19 @@
 
         .s_1 {
             display: grid;
-            gap: 15px;
+            .gap(15px, 20px);
             grid-template-columns: repeat(2, 1fr);
             grid-auto-rows: 1fr;
 
             @media @mob {
                 grid-template-columns: 1fr;
                 grid-auto-rows: unset;
-                gap: 20px;
             }
         }
 
         .bl_1 {
             text-align: center;
-            padding: 20px;
+            .p(20px, 20px 15px);
             border-radius: 30px;
             background-image: linear-gradient(to right, transparent, rgba(107, 157, 193, 0.3));
             position: relative;
@@ -127,7 +124,6 @@
             justify-content: center;
 
             @media @mob {
-                padding: 20px 15px;
                 border-radius: 25px;
             }
 
@@ -175,15 +171,12 @@
             gap: 10px;
             background-color: white;
             padding: 10px 15px;
-            border-radius: 20px;
+            .rad(20px, 15px);
             text-align: left;
             margin-top: 10px;
             width: 100%;
             align-items: center;
 
-            @media @mob {
-                border-radius: 15px;
-            }
 
             img {
                 width: 30px;
@@ -265,11 +258,8 @@
 
             .img_1 {
                 width: 100%;
-                margin: 0px auto 10px;
+                .m(0px auto 10px, 0px auto);
 
-                @media @mob {
-                    margin: 0px auto;
-                }
             }
         }
 
@@ -291,11 +281,8 @@
 
         .d_1 {
             margin-bottom: 10px;
-            gap: 30px;
+            .gap(30px, 10px);
 
-            @media @mob {
-                gap: 10px;
-            }
 
             .p_1 {
                 .t_4 {
@@ -306,11 +293,8 @@
 
         .d_2 {
             padding: 8px;
-            border-radius: 30px;
+            .rad(30px, 15px);
 
-            @media @mob {
-                border-radius: 15px;
-            }
 
             img {
                 width: 28px;
@@ -321,8 +305,6 @@
 
     .top_5 {
         --url: url(../images/ldp_hema_20.jpg);
-
-        .d_1 {}
     }
 
     .top_6 {
@@ -334,12 +316,11 @@
             color: white;
             background-image: var(--color-gradient-hema-bottom);
             border-radius: 30px;
-            padding: 5px 30px;
+            .p(5px 30px, 5px 20px);
             font-family: var(--font-hema-bold);
             display: inline-block;
 
             @media @mob {
-                padding: 5px 20px;
                 margin: 0px;
             }
         }
@@ -356,26 +337,20 @@
             font-family: var(--font-hema-mediumitalic);
             .fs(18px, 26px);
             text-transform: uppercase;
-            margin-bottom: 30px;
+            .mb(30px, 10px);
 
-            @media @mob {
-                margin-bottom: 10px;
-            }
         }
 
         .bl_1 {
-            gap: 30px;
-            margin-bottom: 60px;
+            .gap(30px, 10px);
+            .mb(60px, 30px);
             grid-auto-columns: 1fr;
             grid-auto-flow: column;
             align-items: stretch;
-            .w(100%);
 
             @media @mob {
                 grid-auto-rows: 1fr;
                 grid-auto-flow: row;
-                gap: 10px;
-                margin-bottom: 30px;
 
             }
 
@@ -391,27 +366,20 @@
         }
 
         .s_1 {
-            gap: 30px;
+            .gap(30px, 10px);
             grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-            margin-bottom: 60px;
+            .mb(60px, 30px);
 
             @media @mob {
                 grid-template-columns: 1fr;
-                margin-bottom: 30px;
-                gap: 10px;
             }
         }
 
         .bl_2 {
-            gap: 30px;
+            .gap(30px, 15px);
             grid-auto-columns: minmax(0, 1fr);
             grid-auto-flow: column;
-
-            @media @mob {
-                gap: 15px;
-                width: 100%;
-            }
-
+            .w(fit-content, 100%);
 
             .d_1 {
                 background: no-repeat center / contain;
@@ -446,29 +414,20 @@
             padding: 5px 20px;
             background-image: linear-gradient(to right, transparent, var(--color-dark-blue) 20%, var(--color-dark-blue) 80%, transparent);
             text-transform: uppercase;
-            margin-bottom: 30px;
+            .mb(30px, 10px);
 
-            @media @mob {
-                margin-bottom: 10px;
-            }
         }
 
         .bl_3 {
-            margin: 0px auto 60px;
+            .m(0px auto 60px, 0px auto 30px);
 
-            @media @mob {
-                margin: 0px auto 30px;
-            }
 
             .d_1 {
                 background-image: linear-gradient(to bottom, var(--color-medium-blue) 30%, var(--color-light-blue));
                 color: white;
-                padding: 15px;
+                .p(15px, 0px);
                 border-radius: 50%;
 
-                @media @mob {
-                    padding: 0px;
-                }
 
                 .t_7 {
                     .fs(18px, 42px);
@@ -504,13 +463,9 @@
         --url: url(../images/ldp_hema_31.jpg);
 
         .img_1 {
-            margin: 30px auto;
-            width: 200px;
+            .m(30px auto, 0px auto 15px);
+            .w(200px, unset);
 
-            @media @mob {
-                margin: 0px auto 15px;
-                width: unset;
-            }
         }
 
     }

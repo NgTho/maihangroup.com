@@ -13,14 +13,14 @@
     }
 }
 
-.mob(@rules) {
-    @media @mob {
+.tab(@rules) {
+    @media @tab {
         @rules();
     }
 }
 
-.tab(@rules) {
-    @media @tab {
+.mob(@rules) {
+    @media @mob {
         @rules();
     }
 }
@@ -35,11 +35,29 @@
     background:~"@{repeat} @{pos} / @{size}";
 }
 
-.bg(@url: false, @repeat: no-repeat, @pos: center, @size: cover) when not (@url =false) {
+.bg(@url: false, @repeat: no-repeat, @pos: center, @size: cover) when (isstring(@url)) {
     background:~"url(@{url}) @{repeat} @{pos} / @{size}";
 }
 
-.res-tablet(@prop, @mobile, @tablet) when (@tablet =true) {
+.bg(@url: false, @repeat: no-repeat, @pos: center, @size: cover) when not (@url =false) and not (isstring(@url)) and (replace("@{url}", "^var\(.*$", "VAR")="VAR") {
+    background:~"image-set(@{url} 1x) @{repeat} @{pos} / @{size}";
+}
+
+.bg(@url: false, @repeat: no-repeat, @pos: center, @size: cover) when not (@url =false) and not (isstring(@url)) and not (replace("@{url}", "^var\(.*$", "VAR")="VAR") {
+    background:~"@{url} @{repeat} @{pos} / @{size}";
+}
+
+.res-laptop(@prop, @laptop) when not (@laptop =none) {
+    @{prop}: @laptop;
+}
+
+.res-wide(@prop, @wide) when not (@wide =false) and not (@wide =true) {
+    @media (min-width: @bp-wide) {
+        @{prop}: @wide;
+    }
+}
+
+.res-tablet(@prop, @mobile, @tablet) when (@tablet =true) and not (@mobile =false) {
     @media (max-width: @bp-tablet) {
         @{prop}: @mobile;
     }
@@ -51,135 +69,127 @@
     }
 }
 
-.res-mobile(@prop, @mobile, @tablet, @breakpoint) when not (@tablet =true) {
+.res-mobile(@prop, @mobile, @tablet, @breakpoint) when not (@mobile =false) and not (@tablet =true) {
     @media (max-width: @breakpoint) {
         @{prop}: @mobile;
     }
 }
 
-.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when (@desktop =false) {
-    @{prop}: @mobile;
-}
-
-.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when (@desktop =none) {
+.res(@prop, @laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res-laptop(@prop, @laptop);
+    .res-wide(@prop, @wide);
     .res-tablet(@prop, @mobile, @tablet);
     .res-mobile(@prop, @mobile, @tablet, @breakpoint);
 }
 
-.res(@prop, @mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) when not (@desktop =false) and not (@desktop =none) {
-    @{prop}: @desktop;
-    .res-tablet(@prop, @mobile, @tablet);
-    .res-mobile(@prop, @mobile, @tablet, @breakpoint);
+.m(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.m(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin, @mobile, @desktop, @tablet, @breakpoint);
+.mt(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin-top, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.mt(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin-top, @mobile, @desktop, @tablet, @breakpoint);
+.mb(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin-bottom, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.mb(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin-bottom, @mobile, @desktop, @tablet, @breakpoint);
+.ml(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin-left, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.ml(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin-left, @mobile, @desktop, @tablet, @breakpoint);
+.mr(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin-right, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.mr(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin-right, @mobile, @desktop, @tablet, @breakpoint);
+.mx(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin-inline, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.mx(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin-inline, @mobile, @desktop, @tablet, @breakpoint);
+.my(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(margin-block, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.my(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(margin-block, @mobile, @desktop, @tablet, @breakpoint);
+.p(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.p(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding, @mobile, @desktop, @tablet, @breakpoint);
+.pt(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding-top, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.pt(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding-top, @mobile, @desktop, @tablet, @breakpoint);
+.pb(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding-bottom, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.pb(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding-bottom, @mobile, @desktop, @tablet, @breakpoint);
+.pl(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding-left, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.pl(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding-left, @mobile, @desktop, @tablet, @breakpoint);
+.pr(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding-right, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.pr(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding-right, @mobile, @desktop, @tablet, @breakpoint);
+.px(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding-inline, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.px(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding-inline, @mobile, @desktop, @tablet, @breakpoint);
+.py(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(padding-block, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.py(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(padding-block, @mobile, @desktop, @tablet, @breakpoint);
+.w(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(width, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.w(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(width, @mobile, @desktop, @tablet, @breakpoint);
+.h(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(height, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.h(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(height, @mobile, @desktop, @tablet, @breakpoint);
+.mw(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(max-width, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.mw(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(max-width, @mobile, @desktop, @tablet, @breakpoint);
+.minh(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(min-height, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.minh(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(min-height, @mobile, @desktop, @tablet, @breakpoint);
+.lh(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(line-height, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.lh(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(line-height, @mobile, @desktop, @tablet, @breakpoint);
+.gap(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(gap, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.gap(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(gap, @mobile, @desktop, @tablet, @breakpoint);
+.rad(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(border-radius, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.rad(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(border-radius, @mobile, @desktop, @tablet, @breakpoint);
+.dp(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(display, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.dp(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(display, @mobile, @desktop, @tablet, @breakpoint);
+.ta(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(text-align, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.ta(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(text-align, @mobile, @desktop, @tablet, @breakpoint);
+.po(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(position, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.po(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(position, @mobile, @desktop, @tablet, @breakpoint);
+.top(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(top, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.top(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(top, @mobile, @desktop, @tablet, @breakpoint);
+.right(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(right, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.right(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(right, @mobile, @desktop, @tablet, @breakpoint);
+.bottom(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(bottom, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
 
-.bottom(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(bottom, @mobile, @desktop, @tablet, @breakpoint);
-}
-
-.left(@mobile, @desktop: false, @tablet: false, @breakpoint: @bp-mobile) {
-    .res(left, @mobile, @desktop, @tablet, @breakpoint);
+.left(@laptop, @mobile: false, @tablet: false, @wide: false, @breakpoint: @bp-mobile) {
+    .res(left, @laptop, @mobile, @tablet, @wide, @breakpoint);
 }
