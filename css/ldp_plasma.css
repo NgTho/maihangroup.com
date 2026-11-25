@@ -134,15 +134,10 @@
 }
 .ldp_plasma .top_2 .bl_1 .d_1 {
   grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
-  gap: 30px;
-  margin: -100px auto 10px;
+  gap: 15px;
+  margin: -10% auto 10px;
   align-items: center;
   width: fit-content;
-}
-@media (max-width: 1199px) {
-  .ldp_plasma .top_2 .bl_1 .d_1 {
-    gap: 5px;
-  }
 }
 @media (max-width: 767px) {
   .ldp_plasma .top_2 .bl_1 .d_1 {

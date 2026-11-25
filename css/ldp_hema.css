@@ -4,6 +4,9 @@
   font-size: clamp(14px, 0.9375vw, 18px);
   font-family: var(--font-hema-normal);
 }
+.ldp_hema a {
+  color: var(--color-dark-blue);
+}
 .ldp_hema b {
   font-family: var(--font-hema-bold);
 }

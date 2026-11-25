@@ -95,13 +95,20 @@
             background-position: center top 30px;
         }
 
+        .res(aspect-ratio, 1/1, unset, 1/1);
+
+
         .d_1 {
             .m(0px auto 120px, 0px auto 60px);
 
         }
 
         .t_1 {
-            .fs(22px, 36px);
+            .fs(18px, 36px);
+        }
+
+        .t_2 {
+            .fs(28px, 52px);
         }
     }
 
@@ -204,7 +211,7 @@
                 .m(0 ~"calc(-1 * (1 - var(--scale)) * var(--w) / 2)", false, 0px auto);
 
                 @media @tab {
-                    --border-width: 2px;
+                    --border-width: 4px;
                     transform: unset;
                     border-radius: 30px;
                     max-width: 500px;
@@ -255,7 +262,7 @@
                 }
 
                 .t_3 {
-                    .fs(24px, 32px);
+                    .fs(22px, 32px);
                     text-align: justify;
                     margin: 0px;
                 }
@@ -265,8 +272,8 @@
                 --r: var(--angle);
 
                 background-color: var(--color-racing-green);
-                border: 5px solid white;
-                outline: 5px solid var(--color-racing-green);
+                border: var(--border-width) solid white;
+                outline: var(--border-width) solid var(--color-racing-green);
 
                 .t_2 {
                     color: var(--color-racing-green);

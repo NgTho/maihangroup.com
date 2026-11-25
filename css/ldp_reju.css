@@ -523,11 +523,6 @@
 }
 @media (max-width: 1199px) {
   .bl_product {
-    gap: 1200px;
-  }
-}
-@media (max-width: 767px) {
-  .bl_product {
     gap: 30px 15px;
   }
 }
